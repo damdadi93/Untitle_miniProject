@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    private ComponentScript componentScript;
+    public ComponentManager componentScript;
     private InputScript inputScript; // 입력
     private Rigidbody2D rigid; // 리지드바디
     private Animator animator; // 애니메이터
@@ -19,7 +19,6 @@ public class PlayerJump : MonoBehaviour
 
     void Awake()
     {
-        componentScript = GetComponent<ComponentScript>();
         inputScript = GetComponent<InputScript>();
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -34,11 +33,14 @@ public class PlayerJump : MonoBehaviour
         Debug.DrawRay(jumpPivot.position, Vector2.down* jumpScope, new Color(0, 1, 0));    //아래로빔쏨
         RaycastHit2D rayHit = Physics2D.Raycast(jumpPivot.position, Vector2.down, jumpScope, LayerMask.GetMask("Ground"));//땅에 붙어있는지 감지
 
-        if (rayHit.collider != null && !isGrounded)//착지
+        if (rayHit.collider != null)//착지
         {
             isGrounded = true;
             jumpCount = componentScript.JumpCompoent;
-            jumpDust.Play();
+            if (!isGrounded)
+            {
+                jumpDust.Play();
+            }
         }
         if (rayHit.collider == null)//공중
         {
