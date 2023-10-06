@@ -13,7 +13,7 @@ public class PlayerJump : MonoBehaviour
     public bool isGrounded;
     public int jumpCount;
     public ParticleSystem jumpDust;
-    public Transform jumpStandard;//¶¥ÀÎÁö Å½ÁöÇÏ´Â ±âÁØ
+    public Transform jumpPivot;//¶¥ÀÎÁö Å½ÁöÇÏ´Â ±âÁØ
 
     public float jumpScope = 1.1f;
 
@@ -31,8 +31,8 @@ public class PlayerJump : MonoBehaviour
         else animator.SetBool("isJumping", false);
         animator.SetBool("isGrounded", isGrounded);
 
-        Debug.DrawRay(jumpStandard.position, Vector2.down* jumpScope, new Color(0, 1, 0));    //¾Æ·¡·Îºö½ô
-        RaycastHit2D rayHit = Physics2D.Raycast(jumpStandard.position, Vector2.down, jumpScope, LayerMask.GetMask("Ground"));//¶¥¿¡ ºÙ¾îÀÖ´ÂÁö °¨Áö
+        Debug.DrawRay(jumpPivot.position, Vector2.down* jumpScope, new Color(0, 1, 0));    //¾Æ·¡·Îºö½ô
+        RaycastHit2D rayHit = Physics2D.Raycast(jumpPivot.position, Vector2.down, jumpScope, LayerMask.GetMask("Ground"));//¶¥¿¡ ºÙ¾îÀÖ´ÂÁö °¨Áö
 
         if (rayHit.collider != null && !isGrounded)//ÂøÁö
         {
@@ -43,6 +43,7 @@ public class PlayerJump : MonoBehaviour
         if (rayHit.collider == null)//°øÁß
         {
             isGrounded = false;
+            jumpCount = Mathf.Min(jumpCount, componentScript.JumpCompoent - 1);
         }
 
         if (inputScript.jump && jumpCount > 0)//Á¡ÇÁ
