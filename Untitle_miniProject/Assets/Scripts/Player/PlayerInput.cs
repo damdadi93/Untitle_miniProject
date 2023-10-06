@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : InputScript
 {
     private string moveAxisName = "Horizontal"; 
-
-    public float move;
-    public bool jump;
 
     void Update()
     {
         move = Input.GetAxis(moveAxisName);
-
+        jump = Input.GetButtonDown("Jump");
     }
 }
