@@ -5,17 +5,27 @@ using UnityEngine;
 public class UIButtonManager : MonoBehaviour
 {
     GameObject player;
-   
+    MoveScript moveScript;
+    public bool leftmove;
+    public bool rightmove;
+    public float move;
 
     public void Init()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        //playerScript = player.GetComponent<PlayerMovement>();
+        moveScript = player.GetComponent<MoveScript>();
+        move = moveScript.moveSpeed;
     }
     
     public void LeftDown()
     {
         //playerScript.inputLeft = true;
+        if(move <0)
+        {
+           // moveScript.moveSpeed()
+        }
+       
+
     }
     public void LeftUp()
     {
@@ -35,6 +45,7 @@ public class UIButtonManager : MonoBehaviour
     public void JumpClick()
     {
         Debug.Log("Jump");
+        
     }
 
     public void LeftClick()
