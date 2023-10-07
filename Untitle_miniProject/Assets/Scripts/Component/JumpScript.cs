@@ -35,12 +35,12 @@ public class PlayerJump : MonoBehaviour
 
         if (rayHit.collider != null)//ТјСі
         {
-            isGrounded = true;
-            jumpCount = componentScript.JumpCompoent;
             if (!isGrounded)
             {
                 jumpDust.Play();
             }
+            isGrounded = true;
+            jumpCount = componentScript.JumpCompoent;
         }
         if (rayHit.collider == null)//АјСп
         {

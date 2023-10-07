@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBeginDragHandler
@@ -23,11 +24,20 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
         transform.SetParent(GameObject.FindGameObjectWithTag("Main Canvas").transform);
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
+
+        if (ComponentType == "Move") componentmanager.MoveComponent -= 1;
+        if (ComponentType == "Jump") componentmanager.JumpCompoent -= 1;
+        componentmanager.UIUpdate();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        GetComponent<RectTransform>().position = (Vector2)Cam.ScreenToWorldPoint(Input.mousePosition);
+        GetComponent<RectTransform>().position = (Vector2)Cam.ScreenToWorldPoint(Input.mousePosition);//마우스 따라가도록
+
+        GameObject[] ComponentManagers = GameObject.FindGameObjectsWithTag("ComponentManager");//모든 컴포넌트 매니저 활성화
+        for(int i=0; i< ComponentManagers.Length; i++)
+            ComponentManagers[i].GetComponent<Image>().enabled = true;
+        componentmanager.GetComponent<Image>().enabled = false; //이 컴포넌트의 컴포넌트 매니저만 비활성화
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -36,12 +46,17 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
-        if (isEnd)
+        if (!isEnd)
         {
-            if (ComponentType == "Move") componentmanager.MoveComponent -= 1;
-            if (ComponentType == "Jump") componentmanager.JumpCompoent -= 1;
+            if (ComponentType == "Move") componentmanager.MoveComponent += 1;
+            if (ComponentType == "Jump") componentmanager.JumpCompoent += 1;
             componentmanager.UIUpdate();
         }
+        GameObject[] ComponentManagers = GameObject.FindGameObjectsWithTag("ComponentManager");//모든 컴포넌트 매니저 비활성화
+        for (int i = 0; i < ComponentManagers.Length; i++)
+            ComponentManagers[i].GetComponent<Image>().enabled = false;
+
+        Destroy(gameObject, 0f);
     }
 
 }

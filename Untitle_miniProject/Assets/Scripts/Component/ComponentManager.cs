@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine.EventSystems;
 
-public class ComponentManager : MonoBehaviour, IDropHandler
+public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public int MoveComponent;//이동컴포넌트
     public int JumpCompoent;//점프컴포넌트
 
     public GameObject ComponentParent; //컴포넌트들 만들 장소
+    public GameObject ComponentCover; 
     public GameObject MoveComponentPrefab;
     public GameObject JumpComponentPrefab;
+
+    Color ImageColor;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -25,6 +30,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler
 
     void Awake()
     {
+        ImageColor = GetComponent<Image>().color;
         UIUpdate();
     }
 
@@ -37,22 +43,45 @@ public class ComponentManager : MonoBehaviour, IDropHandler
                 if (ComponentList[i] != transform)
                     Destroy(ComponentList[i].gameObject);
 
-        for (int i = 0; i < MoveComponent; i++)//Move UI 생성
-        {
+
+        if (MoveComponent > 0) {//이동 컴포넌트
+            GameObject CoverObject = GameObject.Instantiate(ComponentCover, new Vector3(0, 0, 0), Quaternion.identity);
+            CoverObject.transform.SetParent(ComponentParent.transform);
+            CoverObject.transform.localScale = new Vector3(1, 1, 1);
+            CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + MoveComponent;
+
             GameObject tmpObject = GameObject.Instantiate(MoveComponentPrefab, new Vector3(0,0,0), Quaternion.identity);
             tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
-            tmpObject.transform.SetParent(ComponentParent.transform);
+            tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
+            tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
         }
 
-        for (int i = 0; i < JumpCompoent; i++)//Jump UI 생성
+        if (JumpCompoent > 0)//점프 컴포넌트
         {
+            GameObject CoverObject = GameObject.Instantiate(ComponentCover, new Vector3(0, 0, 0), Quaternion.identity);
+            CoverObject.transform.SetParent(ComponentParent.transform);
+            CoverObject.transform.localScale = new Vector3(1, 1, 1);
+            CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + JumpCompoent;
+
             GameObject tmpObject = GameObject.Instantiate(JumpComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
             tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
-            tmpObject.transform.SetParent(ComponentParent.transform);
+            tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
+            tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
         }
 
+    }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        ImageColor.a = 0.5f;
+        GetComponent<Image>().color = ImageColor;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        ImageColor.a = 0.1f;
+        GetComponent<Image>().color = ImageColor;
     }
 }
