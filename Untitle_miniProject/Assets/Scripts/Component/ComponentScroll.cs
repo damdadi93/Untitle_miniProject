@@ -7,8 +7,9 @@ using UnityEngine.EventSystems;
 public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Scrollbar scrollbar;
-    float targetPos;
+    float targetPos = 1;
     bool isdrag = false;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         isdrag = true;
@@ -16,7 +17,18 @@ public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public void OnDrag(PointerEventData eventData)
     {
-        
+        if (scrollbar.value < -0.5f)//스크롤이 너무많이되면 끝냄
+        {
+            eventData.pointerDrag = null;
+            targetPos = 0f;
+            isdrag = false;
+        }
+        else if (scrollbar.value > 1.2f)
+        {
+            eventData.pointerDrag = null;
+            targetPos = 1f;
+            isdrag = false;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
