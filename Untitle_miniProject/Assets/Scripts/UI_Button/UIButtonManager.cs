@@ -10,6 +10,7 @@ public class UIButtonManager : MonoBehaviour
     public bool rightmove;
     public float move;
 
+
     public void Init()
     {
         player = GameObject.FindGameObjectWithTag("Player");

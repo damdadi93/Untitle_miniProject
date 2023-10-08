@@ -13,6 +13,10 @@ public class move_script_copy : MonoBehaviour
     public float moveSpeed = 5f;
     public ParticleSystem moveDust;
 
+   
+    public float horizontalMove;
+
+
     void Awake()
     {
         inputScript = GetComponent<InputScript>();
@@ -23,10 +27,12 @@ public class move_script_copy : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+         
+        
     }
 
-    private void Move()
-    {
+    public void Move()
+    {       
         rigid.velocity = new Vector2(moveSpeed * inputScript.move * componentScript.MoveComponent, rigid.velocity.y);//¼Óµµ
 
         if (inputScript.move * componentScript.MoveComponent != 0)
@@ -42,4 +48,9 @@ public class move_script_copy : MonoBehaviour
             moveDust.Stop();
         }
     }
+
+   
+
+
+
 }
