@@ -1861,7 +1861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 69.3}
+  m_AnchoredPosition: {x: 0, y: 69.3002}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &850198032
@@ -2187,8 +2187,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 399910442}
   m_HandleRect: {fileID: 399910441}
   m_Direction: 2
-  m_Value: 0.00000022018453
-  m_Size: 0.76814216
+  m_Value: -0.000002862399
+  m_Size: 0.7596213
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8259,8 +8259,6 @@ GameObject:
   - component: {fileID: 375063817015561588}
   - component: {fileID: 375063817015561587}
   - component: {fileID: 375063817015561590}
-  - component: {fileID: 375063817015561591}
-  - component: {fileID: 375063817015561592}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8476,42 +8474,6 @@ MonoBehaviour:
   jumpDust: {fileID: 7333433933842898293}
   jumpPivot: {fileID: 850198033}
   jumpScope: 0.1
---- !u!114 &375063817015561591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375063817015561552}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f09bd4c1b30af40962a4a72d50db8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  move: 0
-  jump: 0
-  speed: 10
-  horizontalMove: 0
-  moveRight: 0
-  moveLeft: 0
-  rb: {fileID: 0}
---- !u!114 &375063817015561592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375063817015561552}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fde0fedf3c8c140b1301bfca0ee8cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  componentScript: {fileID: 1038956843}
-  Canvas: {fileID: 1852984866}
-  moveSpeed: 5
-  moveDust: {fileID: 1835854383}
-  horizontalMove: 0
 --- !u!4 &1262023190741176130
 Transform:
   m_ObjectHideFlags: 0

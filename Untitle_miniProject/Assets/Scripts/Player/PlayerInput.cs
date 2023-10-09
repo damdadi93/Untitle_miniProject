@@ -9,12 +9,12 @@ public class PlayerInput : InputScript
     public bool touchLeft;
     public bool touchJump;
 
-    private string moveAxisName = "Horizontal"; 
+    private string moveAxisName = "Horizontal";
 
     public void Update()
     {
         move = Input.GetAxis(moveAxisName);
-        
+
         jump = Input.GetButtonDown("Jump");
 
         Movement();
@@ -49,7 +49,7 @@ public class PlayerInput : InputScript
 
     public void pointerUpJump()
     {
-        touchJump= false;
+        touchJump = false;
     }
 
     public void Movement()
@@ -67,15 +67,15 @@ public class PlayerInput : InputScript
             move = 0f;
         }
 
-        //if (touchJump)
-        //{
-        //    jump = true;
-        //}
-        //else
-        //{
-        //    jump = false;
-        //}
+        if (touchJump)
+        {
+            jump = true;
+        }
+        else
+        {
+            jump = false;
+        }
 
-        jump = touchJump;
+
     }
 }
