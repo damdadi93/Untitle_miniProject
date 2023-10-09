@@ -193,11 +193,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 172}
   m_SizeDelta: {x: 126, y: 229.4}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &90451226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5144444096983349311, guid: a73ded34995f27046be89561fd294438, type: 3}
-  m_PrefabInstance: {fileID: 5856876332541513096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!213 &112576527
 Sprite:
   m_ObjectHideFlags: 0
@@ -16822,9 +16817,9 @@ MonoBehaviour:
   JumpCompoent: 0
   AttackComponent: 1
   Weapon: BattleAxe
-  MoveUI: {fileID: 882816717}
-  JumpUI: {fileID: 90451226}
-  AttackUI: {fileID: 1065325310}
+  MoveUI: {fileID: 0}
+  JumpUI: {fileID: 0}
+  AttackUI: {fileID: 0}
   ComponentParent: {fileID: 9238615}
   ComponentCover: {fileID: 4820493957310720062, guid: 82b195a68b68a394fb02fd74dc882cb1, type: 3}
   MoveComponentPrefab: {fileID: 8779400780698077194, guid: a5842bfe84ee4d64792d49a52dd67bfc, type: 3}
@@ -18375,11 +18370,6 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
---- !u!1 &882816717 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 426004783427340487, guid: a73ded34995f27046be89561fd294438, type: 3}
-  m_PrefabInstance: {fileID: 5856876332541513096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!213 &919681956
 Sprite:
   m_ObjectHideFlags: 0
@@ -18800,11 +18790,6 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
---- !u!1 &1065325310 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4177548075748152363, guid: a73ded34995f27046be89561fd294438, type: 3}
-  m_PrefabInstance: {fileID: 5856876332541513096}
-  m_PrefabAsset: {fileID: 0}
 --- !u!213 &1073806789
 Sprite:
   m_ObjectHideFlags: 0
@@ -29824,10 +29809,9 @@ MonoBehaviour:
   move: 0
   jump: 0
   attack: 0
-  hp: 3
   Sight: {fileID: 1451498639}
   AttackScope: 0.1
-  health: 1
+  health: 5
 --- !u!114 &2030643475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31335,7 +31319,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 891106498701237316, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: health
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1492886962055167108, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchorMax.x
@@ -31415,7 +31399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052758384036725318, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000076293945
+      value: -0.0009128474
       objectReference: {fileID: 0}
     - target: {fileID: 5687129174255737386, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchorMax.x
@@ -31463,8 +31447,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8915861974807294096, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_SpriteHash
-      value: 813783381
+      value: 288431053
       objectReference: {fileID: 0}
+    - target: {fileID: 8915861974807294096, guid: a73ded34995f27046be89561fd294438, type: 3}
+      propertyPath: m_CategoryHash
+      value: 0.009161512
+      objectReference: {fileID: 0}
+    - target: {fileID: 9044609908520386876, guid: a73ded34995f27046be89561fd294438, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 629546c43494c7a46a0bb0e05c431ce3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

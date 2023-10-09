@@ -10,11 +10,13 @@ public class PlayerInput : InputScript
     public Sprite[] joystickSprites;
 
     public int health;
+    float hitcul = 0;
 
     private string moveAxisName = "Horizontal";
 
     public void Update()
     {
+        hitcul -= Time.deltaTime;
         if (canMove)
         {
             move = Input.GetAxisRaw(moveAxisName);
@@ -43,15 +45,20 @@ public class PlayerInput : InputScript
     {
         if (collision.tag == "MonsterAttack")
         {
-            if (health > 0)
+            if (health > 0 && hitcul<0)
             {
                 health -= 1;
+                GetComponent<AttackScript>().CancelInvoke("EndAttack");
                 if (health <= 0)
                 {
                     GetComponent<Animator>().SetTrigger("isDead");
                     GetComponent<Animator>().SetBool("isDeading", true);
-                    GetComponent<AttackScript>().CancelInvoke("EndAttack");
                     Dead();
+                }
+                else
+                {
+                    hitcul = 0.5f;
+                    GetComponent<Animator>().SetTrigger("isHit");
                 }
             }
         }
@@ -59,6 +66,9 @@ public class PlayerInput : InputScript
     void Dead()
     {
         canMove = false;
+        move = 0;
+        jump = false;
+        attack = false;
     }
 
     public void JumpButton()

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class MosterInput : InputScript
 {
-    public float hp;
     public Transform Sight; //raycast 쏠 위치
     public float AttackScope; //공격범위
 
     public int health;
-
+    float hitcul = 0;
 
     public void Awake()
     {
@@ -19,6 +18,7 @@ public class MosterInput : InputScript
     // Update is called once per frame
     void Update()
     {
+        hitcul -= Time.deltaTime;
         if (canMove)
         {
             Debug.DrawRay(Sight.position, Vector3.down, new Color(0, 1, 0)); //앞쪽 아래로 빔
@@ -41,15 +41,20 @@ public class MosterInput : InputScript
     {
         if (collision.tag == "PlayerAttack")
         {
-            if (health > 0)
+            if (health > 0 && hitcul < 0)
             {
                 health -= 1;
+                GetComponent<AttackScript>().CancelInvoke("EndAttack");
                 if (health <= 0)
                 {
                     GetComponent<Animator>().SetTrigger("isDead");
                     GetComponent<Animator>().SetBool("isDeading", true);
-                    GetComponent<AttackScript>().CancelInvoke("EndAttack");
                     Dead();
+                }
+                else
+                {
+                    GetComponent<Animator>().SetTrigger("isHit");
+                    hitcul = 0.5f;
                 }
             }
         }
