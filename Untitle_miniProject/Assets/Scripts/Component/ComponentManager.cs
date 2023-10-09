@@ -60,6 +60,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
 
             GameObject CoverObject = GameObject.Instantiate(ComponentCover, new Vector3(0, 0, 0), Quaternion.identity);
             CoverObject.transform.SetParent(ComponentParent.transform);
+            CoverObject.transform.localPosition = new Vector3(0, 0, 0);
             CoverObject.transform.localScale = new Vector3(1, 1, 1);
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + MoveComponent;
 
@@ -81,6 +82,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
 
             GameObject CoverObject = GameObject.Instantiate(ComponentCover, new Vector3(0, 0, 0), Quaternion.identity);
             CoverObject.transform.SetParent(ComponentParent.transform);
+            CoverObject.transform.localPosition = new Vector3(0, 0, 0);
             CoverObject.transform.localScale = new Vector3(1, 1, 1);
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + JumpCompoent;
 
@@ -101,6 +103,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
 
             GameObject CoverObject = GameObject.Instantiate(ComponentCover, new Vector3(0, 0, 0), Quaternion.identity);
             CoverObject.transform.SetParent(ComponentParent.transform);
+            CoverObject.transform.localPosition = new Vector3(0, 0, 0);
             CoverObject.transform.localScale = new Vector3(1, 1, 1);
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
 
