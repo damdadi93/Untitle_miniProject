@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class BackStageSelect : MonoBehaviour
+public class BackSelectStage : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +17,10 @@ public class BackStageSelect : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void BackScene()
+    {
+        SceneManager.LoadScene("SceneSelect");
     }
 }

@@ -16,7 +16,7 @@ public class StageSelector : MonoBehaviour
    
     void Awake()
     {
-        stageText = GetComponent<TextMeshProUGUI>();
+        stageText = GetComponentInChildren<TextMeshProUGUI>();
 
         //stageText.text = stage.ToString();
         //if(stage == 0)
@@ -25,7 +25,7 @@ public class StageSelector : MonoBehaviour
         //    stageText.text = word;
 
         //}
-        if(stageText != null )
+        if(stageText)
         {
             stageText.text = stage.ToString();
         }
@@ -49,9 +49,6 @@ public class StageSelector : MonoBehaviour
         }
     }
 
-    public void BackScene() 
-    {
-        SceneManager.LoadScene("SceneSelect");
-    }
+  
 
 }
