@@ -15,67 +15,10 @@ public class PlayerInput : InputScript
 
     public void Update()
     {
-<<<<<<< Updated upstream
-        move = Input.GetAxis(moveAxisName);
-
-        jump = Input.GetButtonDown("Jump");
-
-        Movement();
-    }
-
-
-
-    public void pointerDownLeft()
-    {
-        touchLeft = true;
-    }
-
-    public void pointerUpLeft()
-    {
-        touchLeft = false;
-    }
-
-    public void pointerDownRight()
-    {
-        touchRight = true;
-    }
-
-    public void pointerUpRight()
-    {
-        touchRight = false;
-    }
-
-    public void pointerDownJump()
-    {
-        touchJump = true;
-    }
-
-    public void pointerUpJump()
-    {
-        touchJump = false;
-    }
-
-    public void Movement()
-    {
-        if (touchLeft && !touchRight)
-=======
         if (canMove)
->>>>>>> Stashed changes
         {
             move = Input.GetAxisRaw(moveAxisName);
 
-<<<<<<< Updated upstream
-        if (touchJump)
-        {
-            jump = true;
-        }
-        else
-        {
-            jump = false;
-        }
-
-
-=======
             if (Input.GetButtonDown("Jump"))
                 jump = true;
             if (Input.GetButtonDown("Fire1"))
@@ -125,6 +68,5 @@ public class PlayerInput : InputScript
     public void AttackButton()
     {
         attack = true;
->>>>>>> Stashed changes
     }
 }

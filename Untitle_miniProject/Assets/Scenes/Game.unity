@@ -19919,7 +19919,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.31905144, y: 0.093229294}
+  m_Offset: {x: -0.25922054, y: 0.093229294}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -19930,7 +19930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0248611, y: 1.1864586}
+  m_Size: {x: 1.144523, y: 1.1864586}
   m_EdgeRadius: 0
 --- !u!213 &1287481496
 Sprite:
@@ -29749,7 +29749,7 @@ GameObject:
   - component: {fileID: 2030643472}
   - component: {fileID: 2030643471}
   - component: {fileID: 2030643481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Monster
   m_TagString: Moster
   m_Icon: {fileID: 0}
