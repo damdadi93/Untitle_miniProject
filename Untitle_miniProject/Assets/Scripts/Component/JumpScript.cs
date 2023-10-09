@@ -33,14 +33,17 @@ public class JumpScript : MonoBehaviour
         Debug.DrawRay(jumpPivot.position, Vector2.down* jumpScope, new Color(0, 1, 0));    //아래로빔쏨
         RaycastHit2D rayHit = Physics2D.Raycast(jumpPivot.position, Vector2.down, jumpScope, LayerMask.GetMask("Ground"));//땅에 붙어있는지 감지
 
-        if (inputScript.jump && jumpCount > 0)//점프
+        if (inputScript.jump)//점프
         {
             inputScript.jump = false;
-            jumpDust.Play();
-            rigid.velocity = new Vector2(rigid.velocity.x, 0);
-            rigid.AddForce(Vector2.up * jumpPower);
-            jumpCount -= 1;
-            animator.SetTrigger("isJump");
+            if (jumpCount > 0)
+            {
+                jumpDust.Play();
+                rigid.velocity = new Vector2(rigid.velocity.x, 0);
+                rigid.AddForce(Vector2.up * jumpPower);
+                jumpCount -= 1;
+                animator.SetTrigger("isJump");
+            }
         }
 
         if (rayHit.collider != null)//착지
@@ -51,7 +54,6 @@ public class JumpScript : MonoBehaviour
             }
             isGrounded = true;
             jumpCount = componentScript.JumpCompoent;
-            inputScript.jump = false;
         }
         if (rayHit.collider == null)//공중
         {
