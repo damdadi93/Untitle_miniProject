@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Main Canvas
   - ComponentManager
+  - Moster
+  - PlayerAttack
+  - MonsterAttack
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

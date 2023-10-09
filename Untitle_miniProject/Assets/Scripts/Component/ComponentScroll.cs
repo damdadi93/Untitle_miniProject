@@ -7,8 +7,16 @@ using UnityEngine.EventSystems;
 public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Scrollbar scrollbar;
+
+    public GameObject OperationUI;
+
     float targetPos = 1;
     bool isdrag = false;
+
+    public void Awake()
+    {
+        scrollbar.value = 1;
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -45,7 +53,11 @@ public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     void Update()
     {
         if (!isdrag)
-            //scrollbar.value = targetPos;
+        {
+            if(OperationUI) OperationUI.GetComponent<CanvasGroup>().alpha = Mathf.Lerp(OperationUI.GetComponent<CanvasGroup>().alpha, targetPos, 0.05f);
             scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
+            if (targetPos == 1) OperationUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
+            else if (targetPos == 0) OperationUI.GetComponent<CanvasGroup>().blocksRaycasts = false;
+        }
     }
 }

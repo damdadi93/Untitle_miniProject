@@ -12,6 +12,7 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
     Transform startParent;
     public bool isEnd = false;//드래그 완료
     public ComponentManager componentmanager;
+    public string weapon;
 
 
     void Awake() { 
@@ -27,6 +28,7 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
 
         if (ComponentType == "Move") componentmanager.MoveComponent -= 1;
         if (ComponentType == "Jump") componentmanager.JumpCompoent -= 1;
+        if (ComponentType == "Attack") { componentmanager.AttackComponent -= 1; componentmanager.Weapon = ""; }
         componentmanager.UIUpdate();
     }
 
@@ -50,6 +52,8 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
         {
             if (ComponentType == "Move") componentmanager.MoveComponent += 1;
             if (ComponentType == "Jump") componentmanager.JumpCompoent += 1;
+            if (ComponentType == "Attack") { componentmanager.AttackComponent += 1; componentmanager.Weapon = weapon; }
+
             componentmanager.UIUpdate();
         }
         GameObject[] ComponentManagers = GameObject.FindGameObjectsWithTag("ComponentManager");//모든 컴포넌트 매니저 비활성화
