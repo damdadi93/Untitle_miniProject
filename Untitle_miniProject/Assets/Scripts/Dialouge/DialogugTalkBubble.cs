@@ -5,6 +5,8 @@ using TMPro;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 
+
+
 [System.Serializable]    //스크립트 직렬화
 public class Dialogue
 {
