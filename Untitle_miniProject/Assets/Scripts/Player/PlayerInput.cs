@@ -23,6 +23,8 @@ public class PlayerInput : InputScript
 
             if (Input.GetButtonDown("Jump"))
                 jump = true;
+            else
+                jump = false;
             if (Input.GetButtonDown("Fire1"))
                 attack = true;
 

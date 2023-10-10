@@ -9,6 +9,8 @@ public class MosterInput : InputScript
 
     public int health;
     float hitcul = 0;
+    public float Angry;
+    public Transform playerTrans;
 
     public void Awake()
     {
@@ -28,11 +30,33 @@ public class MosterInput : InputScript
                 move *= -1;
             }
 
-            Debug.DrawRay(transform.position + new Vector3(0, 0.5f, 0), new Vector3(move * AttackScope, 0, 0), new Color(1, 0, 0)); //¾ÕÂÊÀ¸·Î ºö
+            Debug.DrawRay(Sight.position, new Vector3(move * 5, 0, 0), new Color(0, 0, 1)); //ÇÃ·¹ÀÌ¾îÅ½Áö
+            RaycastHit2D PlayerrayHit = Physics2D.Raycast(Sight.position, new Vector3(move * 5, 0, 0), 1, LayerMask.GetMask("Player"));
+            if (PlayerrayHit)
+            {
+                Angry = 3f;
+                playerTrans = PlayerrayHit.transform;
+            }
+
+            Debug.DrawRay(transform.position + new Vector3(0, 0.5f, 0), new Vector3(move * AttackScope, 0, 0), new Color(1, 0, 0)); //°ø°ÝÅ½Áö
             RaycastHit2D AttackrayHit = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), new Vector3(move * AttackScope, 0, 0), 1, LayerMask.GetMask("Player"));
             if (AttackrayHit)
             {
                 attack = true;
+            }
+
+            if (Angry > 0)
+            {
+                Angry -= Time.deltaTime;
+                if (move != 0)
+                {
+                    if (playerTrans.position.x < transform.position.x)
+                    {
+                        move = -1;
+                    }
+                    else
+                        move = 1;
+                }
             }
         }
     }
