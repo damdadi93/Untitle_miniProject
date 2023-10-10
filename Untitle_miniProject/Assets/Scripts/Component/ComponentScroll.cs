@@ -10,12 +10,12 @@ public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public GameObject OperationUI;
 
-    float targetPos = 1;
+    float targetPos = 0;
     bool isdrag = false;
 
     public void Awake()
     {
-        scrollbar.value = 1;
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -54,10 +54,25 @@ public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         if (!isdrag)
         {
-            if(OperationUI) OperationUI.GetComponent<CanvasGroup>().alpha = Mathf.Lerp(OperationUI.GetComponent<CanvasGroup>().alpha, targetPos, 0.05f);
+            if (OperationUI) OperationUI.GetComponent<CanvasGroup>().alpha = Mathf.Lerp(OperationUI.GetComponent<CanvasGroup>().alpha, targetPos, 0.05f);
+
+            GameObject[] ComponentManagers = GameObject.FindGameObjectsWithTag("ComponentManager");
+            for (int i = 0; i < ComponentManagers.Length; i++)
+                ComponentManagers[i].GetComponent<CanvasGroup>().alpha = Mathf.Lerp(ComponentManagers[i].GetComponent<CanvasGroup>().alpha, 1-targetPos, 0.05f);
+
             scrollbar.value = Mathf.Lerp(scrollbar.value, targetPos, 0.1f);
-            if (targetPos == 1) OperationUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
-            else if (targetPos == 0) OperationUI.GetComponent<CanvasGroup>().blocksRaycasts = false;
+            if (targetPos == 1)
+            {
+                OperationUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                for (int i = 0; i < ComponentManagers.Length; i++)
+                    ComponentManagers[i].GetComponent<CanvasGroup>().blocksRaycasts = false;
+            }
+            else if (targetPos == 0)
+            {
+                OperationUI.GetComponent<CanvasGroup>().blocksRaycasts = false;
+                for (int i = 0; i < ComponentManagers.Length; i++)
+                    ComponentManagers[i].GetComponent<CanvasGroup>().blocksRaycasts = true;
+            }
         }
     }
 }

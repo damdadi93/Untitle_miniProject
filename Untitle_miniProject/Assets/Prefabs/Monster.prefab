@@ -5074,7 +5074,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826427728263627671}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -5385,7 +5385,9 @@ MonoBehaviour:
   attack: 0
   Sight: {fileID: 3583600646985211123}
   AttackScope: 0.1
-  health: 5
+  health: 3
+  Angry: 0
+  playerTrans: {fileID: 0}
 --- !u!114 &8829607289348667807
 MonoBehaviour:
   m_ObjectHideFlags: 0
