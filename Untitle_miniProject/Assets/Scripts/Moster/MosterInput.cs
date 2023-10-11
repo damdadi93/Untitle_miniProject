@@ -11,6 +11,7 @@ public class MosterInput : InputScript
     float hitcul = 0;
     public float Angry;
     public Transform playerTrans;
+    public ComponentManager componentScript;
 
     public void Awake()
     {
@@ -32,7 +33,7 @@ public class MosterInput : InputScript
 
             Debug.DrawRay(Sight.position, new Vector3(move * 5, 0, 0), new Color(0, 0, 1)); //플레이어탐지
             RaycastHit2D PlayerrayHit = Physics2D.Raycast(Sight.position, new Vector3(move * 5, 0, 0), 1, LayerMask.GetMask("Player"));
-            if (PlayerrayHit)
+            if (PlayerrayHit && componentScript.AttackComponent != "")
             {
                 Angry = 3f;
                 playerTrans = PlayerrayHit.transform;

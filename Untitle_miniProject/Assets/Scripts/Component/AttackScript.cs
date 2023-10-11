@@ -26,7 +26,7 @@ public class AttackScript : MonoBehaviour
         if (inputScript.attack)
         {
             inputScript.attack = false;
-            if (componentScript.AttackComponent != "" && cul < 0)
+            if (cul < 0)
             {
                 cul = Attackcul;
                 Attack();
@@ -37,7 +37,10 @@ public class AttackScript : MonoBehaviour
 
     private void Attack()
     {
-        animator.SetTrigger("isAttack");
+        if (componentScript.AttackComponent != "")
+        {
+            animator.SetTrigger("isAttack");
+        }
         animator.SetBool("isAttacking", true);
         if (GetComponent<JumpScript>().isGrounded)
         {
