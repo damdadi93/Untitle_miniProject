@@ -46,19 +46,19 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
         {
             SceneManager.LoadScene(nextSceneIndex);
         }
-        forvictoryPanel();
+        victoryPanel.SetActive(false);
     }
 
     public void RetryScene()
     {
-        forvictoryPanel();
+        victoryPanel.SetActive(false);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void forMapButton()
     {
-        Time.timeScale = 1f;
+        victoryPanel.SetActive(false);
         SceneManager.LoadScene("SceneSelect");
     }
     public void fornewGame()
