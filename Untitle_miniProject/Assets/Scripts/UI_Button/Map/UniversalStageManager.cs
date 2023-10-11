@@ -20,6 +20,7 @@ public class UniversalStageManager : MonoBehaviour
         int stage = StageSelector.selectedStage;
         Debug.Log(stage);
         textMeshProUGUI.text = "Stage" + stage.ToString();
+        
         background.sprite = backgrounds[stage - 1];
     }
 

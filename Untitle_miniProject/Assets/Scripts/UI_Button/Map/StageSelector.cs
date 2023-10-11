@@ -42,10 +42,12 @@ public class StageSelector : MonoBehaviour
         if (stage == 0)
         {
             SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("UniversalStage(Background)");
         }
         else
         {
-            SceneManager.LoadScene("Stage" + stage.ToString());
+            SceneManager.LoadScene("UniversalStage(Background)");
+            //SceneManager.LoadScene("Stage" + stage.ToString());
         }
     }
 
