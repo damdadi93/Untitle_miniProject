@@ -70,9 +70,9 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         
-        Debug.Log("초기위치" + firstPosition);
-        Debug.Log(obstacleTransform.position);
-        Debug.Log("trans.position =" + firstPosition);
+        //Debug.Log("초기위치" + firstPosition);
+        //Debug.Log(obstacleTransform.position);
+        //Debug.Log("trans.position =" + firstPosition);
         RepeatMove();
         Rotation();
     }
