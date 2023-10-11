@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &543702425113780062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1213120891784627810}
+  - component: {fileID: 1151436652486258180}
+  m_Layer: 0
+  m_Name: Prologue 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1213120891784627810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543702425113780062}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1151436652486258180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543702425113780062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f9b46929465d424f85b7aa3a2c3d037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultDialoge:
+  - speaker: friend
+    message: "(\uAE4C\uB9CC \uBC29\uC548\uC5D0 \uCEF4\uD4E8\uD130 \uD654\uBA74\uB9CC
+      \uBC18\uC9DD\uAC70\uB9B0\uB2E4)\n\uC5B4 \uC598\uAC00 \uC5B4\uB514\uAC14\uC9C0?"
+    sprite: {fileID: 21300000, guid: 04c7a7aebf323214a801dc7b5fdbe1bb, type: 3}
+  - speaker: player
+    message: "\uB3C4\uC640\uC8FC\uC138\uC694! \uC5EC\uAE30\uC5D0\uC694!"
+    sprite: {fileID: 21300000, guid: 8df7d1ed8511f4587975e4adc57a114f, type: 3}
+  - speaker: friend
+    message: "\uBB50\uC57C \uC598 \uC5EC\uAE30\uC11C \uBB50\uD574?"
+    sprite: {fileID: 21300000, guid: b3d31a63fefd94466ba6cb50bb4de39f, type: 3}
+  - speaker: friend
+    message: "(\uC5BC\uAD74\uC744 \uCEF4\uD4E8\uD130 \uCABD\uC73C\uB85C \uAC00\uC838\uB2E4\uB304\uB2E4)"
+    sprite: {fileID: 21300000, guid: ceeffc9dae8a4dc4e8750b51fa62f8bb, type: 3}

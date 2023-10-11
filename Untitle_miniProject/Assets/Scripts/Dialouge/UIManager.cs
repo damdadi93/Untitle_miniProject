@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public static UIManager Instance { get; private set; }
     [Header("Start")]
     public GameObject startpanel;
+    public GameObject OpeningCanvas;
     public GameObject dialoguePanel;
     public GameObject dialogue;
     public PublicSequence forprologue;
@@ -59,6 +60,10 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public void fordialogue()
     {
         dialogue.SetActive(!dialogue.activeSelf);
+    }
+    public void foropeningCanvas()
+    {
+        OpeningCanvas.SetActive(!OpeningCanvas.activeSelf);
     }
 
     public void OnPointerClick(PointerEventData eventData)
