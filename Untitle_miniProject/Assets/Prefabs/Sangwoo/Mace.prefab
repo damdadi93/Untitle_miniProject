@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2035792297882458996}
   - component: {fileID: 6965818476216703780}
-  - component: {fileID: 8995319112801973959}
   - component: {fileID: 6572793324112692749}
-  - component: {fileID: 1374750712666109206}
+  - component: {fileID: 2115584464976551739}
   m_Layer: 0
   m_Name: Mace
   m_TagString: Untagged
@@ -87,29 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8995319112801973959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5176072354532192647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3192f464d1f141b4bb1499b80aebd971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleObject: {fileID: 0}
-  obstacleTransform: {fileID: 0}
-  isRotation: 0
-  isMove_H: 0
-  isMove_V: 0
-  lineX: 0
-  lineY: 0
-  rotationSpeed: 0
-  moveSpeed_H: 0
-  moveSpeed_V: 0
-  firstPosition: {x: 0, y: 0, z: 0}
 --- !u!60 &6572793324112692749
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -201,7 +177,7 @@ PolygonCollider2D:
       - {x: 0.19156027, y: -0.44296956}
       - {x: 0.291962, y: -0.65715647}
   m_UseDelaunayMesh: 0
---- !u!114 &1374750712666109206
+--- !u!114 &2115584464976551739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -213,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3192f464d1f141b4bb1499b80aebd971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleObject: {fileID: 0}
+  obstacleObject: {fileID: 5176072354532192647}
   obstacleTransform: {fileID: 0}
   isRotation: 0
   isMove_H: 0

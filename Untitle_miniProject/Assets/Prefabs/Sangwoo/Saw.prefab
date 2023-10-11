@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7742921676292889645}
   - component: {fileID: 45681783313553827}
   - component: {fileID: 5418312449131230792}
-  - component: {fileID: 2225126200610766659}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -144,27 +143,4 @@ MonoBehaviour:
   rotationSpeed: 43
   moveSpeed_H: 4.8
   moveSpeed_V: 4.52
-  firstPosition: {x: 0, y: 0, z: 0}
---- !u!114 &2225126200610766659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503875348130008889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3192f464d1f141b4bb1499b80aebd971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleObject: {fileID: 0}
-  obstacleTransform: {fileID: 0}
-  isRotation: 0
-  isMove_H: 0
-  isMove_V: 0
-  lineX: 0
-  lineY: 0
-  rotationSpeed: 0
-  moveSpeed_H: 0
-  moveSpeed_V: 0
   firstPosition: {x: 0, y: 0, z: 0}

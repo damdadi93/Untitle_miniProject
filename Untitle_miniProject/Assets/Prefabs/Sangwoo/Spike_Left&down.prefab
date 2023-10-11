@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2520379841861920916}
   - component: {fileID: 1266420062208797904}
-  - component: {fileID: 5434579283205388385}
   - component: {fileID: 8606023029971163848}
-  - component: {fileID: 5275812005567524390}
+  - component: {fileID: 3894076851581680804}
   m_Layer: 0
   m_Name: Spike_Left&down
   m_TagString: Untagged
@@ -87,29 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5434579283205388385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8824754568706333928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3192f464d1f141b4bb1499b80aebd971, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacleObject: {fileID: 0}
-  obstacleTransform: {fileID: 0}
-  isRotation: 0
-  isMove_H: 0
-  isMove_V: 0
-  lineX: 0
-  lineY: 0
-  rotationSpeed: 0
-  moveSpeed_H: 0
-  moveSpeed_V: 0
-  firstPosition: {x: 0, y: 0, z: 0}
 --- !u!60 &8606023029971163848
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +137,7 @@ PolygonCollider2D:
       - {x: 0.64, y: 0.03}
       - {x: -0.57, y: 0.64}
   m_UseDelaunayMesh: 0
---- !u!114 &5275812005567524390
+--- !u!114 &3894076851581680804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
