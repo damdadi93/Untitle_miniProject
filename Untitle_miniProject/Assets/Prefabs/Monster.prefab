@@ -5056,8 +5056,7 @@ MonoBehaviour:
   Character: {fileID: 5649433928436413510}
   MoveComponent: 1
   JumpCompoent: 0
-  AttackComponent: 1
-  Weapon: BattleAxe
+  AttackComponent: BattleAxe
   MoveUI: {fileID: 0}
   JumpUI: {fileID: 0}
   AttackUI: {fileID: 0}

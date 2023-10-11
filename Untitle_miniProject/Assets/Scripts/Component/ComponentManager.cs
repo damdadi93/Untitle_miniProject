@@ -11,8 +11,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
 
     public int MoveComponent;//이동컴포넌트
     public int JumpCompoent;//점프컴포넌트
-    public int AttackComponent;
-    public string Weapon;
+    public string AttackComponent = "";
 
     public GameObject MoveUI;
     public GameObject JumpUI;
@@ -32,7 +31,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
         {
             if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Move") MoveComponent += 1;
             if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Jump") JumpCompoent += 1;
-            if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Attack") { AttackComponent += 1; Weapon = eventData.pointerDrag.GetComponent<ComponentDrag>().weapon; }
+            if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Attack") { AttackComponent = eventData.pointerDrag.GetComponent<ComponentDrag>().weapon; }
             eventData.pointerDrag.GetComponent<ComponentDrag>().isEnd = true;
             UIUpdate();
         }
@@ -97,7 +96,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             if (JumpUI) JumpUI.SetActive(false);
         }
 
-        if (AttackComponent > 0)//어택 컴포넌트
+        if (AttackComponent != "")//어택 컴포넌트
         {
             if (AttackUI) AttackUI.SetActive(true);
 
@@ -112,7 +111,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
             tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
-            tmpObject.GetComponent<ComponentDrag>().weapon = Weapon;
+            tmpObject.GetComponent<ComponentDrag>().weapon = AttackComponent;
         }
         else
         {
@@ -120,7 +119,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
         }
         if (Character)
         {
-            Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Weapon = Weapon;
+            Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Weapon = AttackComponent;
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Rebuild();
         }
     }

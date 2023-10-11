@@ -28,7 +28,7 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
 
         if (ComponentType == "Move") componentmanager.MoveComponent -= 1;
         if (ComponentType == "Jump") componentmanager.JumpCompoent -= 1;
-        if (ComponentType == "Attack") { componentmanager.AttackComponent -= 1; componentmanager.Weapon = ""; }
+        if (ComponentType == "Attack") { componentmanager.AttackComponent = ""; }
         componentmanager.UIUpdate();
     }
 
@@ -52,7 +52,7 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
         {
             if (ComponentType == "Move") componentmanager.MoveComponent += 1;
             if (ComponentType == "Jump") componentmanager.JumpCompoent += 1;
-            if (ComponentType == "Attack") { componentmanager.AttackComponent += 1; componentmanager.Weapon = weapon; }
+            if (ComponentType == "Attack") { componentmanager.AttackComponent = weapon; }
 
             componentmanager.UIUpdate();
         }

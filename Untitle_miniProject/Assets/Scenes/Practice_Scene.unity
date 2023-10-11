@@ -2148,7 +2148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 69.30095}
+  m_AnchoredPosition: {x: 0, y: 69.3}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &850198032
@@ -2565,8 +2565,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 399910442}
   m_HandleRect: {fileID: 399910441}
   m_Direction: 2
-  m_Value: -0.000013651441
-  m_Size: 0.769
+  m_Value: 0
+  m_Size: 0.768782
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3387,6 +3387,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1702231828 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2035792297882458996, guid: df089308c1098424a8d3863070f4f2db, type: 3}
+  m_PrefabInstance: {fileID: 6378333369908654012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758912616
 GameObject:
   m_ObjectHideFlags: 0
@@ -8621,6 +8626,16 @@ Canvas:
   m_SortingLayerID: 824623099
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1884850744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6266724224868121974, guid: 9d775f36f442ccd4f9673f083e729c7b, type: 3}
+  m_PrefabInstance: {fileID: 8641816984511232077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1884850748 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8708356742307703767, guid: 9d775f36f442ccd4f9673f083e729c7b, type: 3}
+  m_PrefabInstance: {fileID: 8641816984511232077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1891529382
 GameObject:
   m_ObjectHideFlags: 0
@@ -14414,6 +14429,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2115584464976551739, guid: df089308c1098424a8d3863070f4f2db, type: 3}
+      propertyPath: obstacleTransform
+      value: 
+      objectReference: {fileID: 1702231828}
     - target: {fileID: 5176072354532192647, guid: df089308c1098424a8d3863070f4f2db, type: 3}
       propertyPath: m_Name
       value: Mace
@@ -19371,6 +19390,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 596259576696498800, guid: 9d775f36f442ccd4f9673f083e729c7b, type: 3}
+      propertyPath: obstacleObject
+      value: 
+      objectReference: {fileID: 1884850744}
+    - target: {fileID: 596259576696498800, guid: 9d775f36f442ccd4f9673f083e729c7b, type: 3}
+      propertyPath: obstacleTransform
+      value: 
+      objectReference: {fileID: 1884850748}
     - target: {fileID: 6266724224868121974, guid: 9d775f36f442ccd4f9673f083e729c7b, type: 3}
       propertyPath: m_Name
       value: Spike_Up
