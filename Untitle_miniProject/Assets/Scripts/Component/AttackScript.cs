@@ -26,7 +26,7 @@ public class AttackScript : MonoBehaviour
         if (inputScript.attack)
         {
             inputScript.attack = false;
-            if (componentScript.AttackComponent>0 && cul < 0)
+            if (componentScript.AttackComponent != "" && cul < 0)
             {
                 cul = Attackcul;
                 Attack();
