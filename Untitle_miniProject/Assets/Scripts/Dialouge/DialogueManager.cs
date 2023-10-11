@@ -88,11 +88,11 @@ public class DialogueManager : MonoBehaviour
             UIManager.Instance.fordialoguePanel();
             UIManager.Instance.FlashScreen();
             Debug.Log("FlashScreen");
-            SceneManager.LoadScene(targetSceneName);
+            SceneManager.LoadScene("Main");
         }
         else if (!string.IsNullOrEmpty(targetSceneName) && targetSceneName == "MainMenu" && PlayerPrefs.HasKey("IsPlayOpening"))
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Main");
         }
         else if (!string.IsNullOrEmpty(targetSceneName) && targetSceneName == "Tutorial" && !PlayerPrefs.HasKey("IsPlayPrologue"))
         {
