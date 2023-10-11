@@ -5387,6 +5387,7 @@ MonoBehaviour:
   health: 3
   Angry: 0
   playerTrans: {fileID: 0}
+  componentScript: {fileID: 4617867019400394314}
 --- !u!114 &8829607289348667807
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class SettingManager : MonoBehaviour
 {
     public void SceneSelect()
     {
-        SceneManager.LoadScene("SceneSelect");
+        SceneManager.LoadScene("Proloague");
     }
 
     public void Retry()
