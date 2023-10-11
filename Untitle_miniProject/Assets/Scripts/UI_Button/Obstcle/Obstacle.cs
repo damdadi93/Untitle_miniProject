@@ -27,9 +27,9 @@ public class Obstacle : MonoBehaviour
     //x축과 y축을 설정하면 본래의 위치에서 범위만큼 반복이동가능하게
     [Header("Length")]
     [Space(10f)]
-    [Range(0f, 10f)]
+    [Range(-10f, 10f)]
     public float lineX;
-    [Range(0f, 10f)]
+    [Range(-10f, 10f)]
     public float lineY;
 
     [Header("Speed")]
@@ -70,9 +70,9 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
         
-        Debug.Log("초기위치" + firstPosition);
-        Debug.Log(obstacleTransform.position);
-        Debug.Log("trans.position =" + firstPosition);
+        //Debug.Log("초기위치" + firstPosition);
+        //Debug.Log(obstacleTransform.position);
+        //Debug.Log("trans.position =" + firstPosition);
         RepeatMove();
         Rotation();
     }
@@ -97,31 +97,31 @@ public class Obstacle : MonoBehaviour
     {
         if(isMove_H)
         {
-            transform.position = new Vector3(firstPosition.x + Mathf.PingPong(Time.time * moveSpeed_H, lineX), firstPosition.y + transform.position.y, 0f);
-            if(!isMove_H)
-            {
-                Vector3 newPosition = firstPosition + new Vector3(Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0);
-                transform.position = firstPosition;
-            }
+            transform.position = new Vector3(firstPosition.x + Mathf.PingPong(Time.time * moveSpeed_H, lineX), transform.position.y, 0f);
+            //if(!isMove_H)
+            //{
+            //    Vector3 newPosition = firstPosition + new Vector3(Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0);
+            //    transform.position = firstPosition;
+            //}
            
         }
         else if(isMove_V)
         {
-            transform.position = new Vector3(transform.position.x , Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0f);
-            if (!isMove_V)
-            {
-                Vector3 newPosition = firstPosition + new Vector3(Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0);
-                transform.position = firstPosition;
-            }
+            transform.position = new Vector3(transform.position.x , firstPosition.y + Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0f);
+            //if (!isMove_V)
+            //{
+            //    Vector3 newPosition = firstPosition + new Vector3(Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0);
+            //    transform.position = firstPosition;
+            //}
         }
         else if(isMove_H && isMove_V)
         {
             transform.position = new Vector3( Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0f);
-            if (!isMove_H && !isMove_V)
-            {
-                Vector3 newPosition = firstPosition + new Vector3(Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0);
-                transform.position = firstPosition;
-            }
+            //if (!isMove_H && !isMove_V)
+            //{
+            //    Vector3 newPosition = firstPosition + new Vector3(Mathf.PingPong(Time.time * moveSpeed_H, lineX), Mathf.PingPong(Time.time * moveSpeed_V, lineY), 0);
+            //    transform.position = firstPosition;
+            //}
         }
       
     }
@@ -137,4 +137,6 @@ public class Obstacle : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
     }
+
+
 }

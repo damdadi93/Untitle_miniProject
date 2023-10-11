@@ -27,23 +27,48 @@ public class MoveScript : MonoBehaviour
 
     private void Move()
     {
-        rigid.velocity = new Vector2(moveSpeed * inputScript.move * componentScript.MoveComponent, rigid.velocity.y);//속도
-
-        if (inputScript.move * componentScript.MoveComponent != 0)
+        if (componentScript)
         {
-            animator.SetFloat("isWalk", Mathf.Abs(inputScript.move * componentScript.MoveComponent));//애니메이션
-            transform.localScale = inputScript.move > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1); //방향전환
+            rigid.velocity = new Vector2(moveSpeed * inputScript.move * componentScript.MoveComponent, rigid.velocity.y);//속도
 
-            for(int i=0; i<Canvases.Length; i++)
+            if (inputScript.move * componentScript.MoveComponent != 0)
             {
-                Canvases[i].transform.localScale = inputScript.move > 0 ? new Vector3(1, 1,1) : new Vector3(-1, 1, 1); //캔버스는 반대로 방향전환
+                animator.SetFloat("isWalk", Mathf.Abs(inputScript.move * componentScript.MoveComponent));//애니메이션
+                transform.localScale = inputScript.move > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1); //방향전환
+
+                for (int i = 0; i < Canvases.Length; i++)
+                {
+                    Canvases[i].transform.localScale = inputScript.move > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1); //캔버스는 반대로 방향전환
+                }
+                if (animator.GetBool("isGrounded")) moveDust.Play(); else moveDust.Stop(); //파티클
             }
-            if (animator.GetBool("isGrounded")) moveDust.Play(); else moveDust.Stop(); //파티클
+            else
+            {
+                animator.SetFloat("isWalk", 0);
+                moveDust.Stop();
+            }
         }
         else
         {
-            animator.SetFloat("isWalk", 0);
-            moveDust.Stop();
+            rigid.velocity = new Vector2(moveSpeed * inputScript.move, rigid.velocity.y);//속도
+            if (inputScript.move != 0)
+            {
+                animator.SetFloat("isWalk", Mathf.Abs(inputScript.move));//애니메이션
+                transform.localScale = inputScript.move > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1); //방향전환
+
+                for (int i = 0; i < Canvases.Length; i++)
+                {
+                    Canvases[i].transform.localScale = inputScript.move > 0 ? new Vector3(1, 1, 1) : new Vector3(-1, 1, 1); //캔버스는 반대로 방향전환
+                }
+                if (animator.GetBool("isGrounded")) moveDust.Play(); else moveDust.Stop(); //파티클
+            }
+            else
+            {
+                animator.SetFloat("isWalk", 0);
+                moveDust.Stop();
+            }
         }
+
+        
     }
 }
