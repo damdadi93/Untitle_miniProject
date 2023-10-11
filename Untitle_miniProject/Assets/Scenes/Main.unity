@@ -1800,9 +1800,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2038296064}
-        m_TargetAssemblyTypeName: SettingManager, Assembly-CSharp
-        m_MethodName: SceneSelect
+      - m_Target: {fileID: 4242021323593883801, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: fornewGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
