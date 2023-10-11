@@ -23,6 +23,8 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
     public GameObject JumpComponentPrefab;
     public GameObject AttackComponentPrefab;
 
+    
+
     Color ImageColor;
 
     public void OnDrop(PointerEventData eventData)
@@ -64,7 +66,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + MoveComponent;
 
             GameObject tmpObject = GameObject.Instantiate(MoveComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
+            if(tmpObject.GetComponent<ComponentDrag>()) tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
             tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
             tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
@@ -86,7 +88,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + JumpCompoent;
 
             GameObject tmpObject = GameObject.Instantiate(JumpComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
+            if (tmpObject.GetComponent<ComponentDrag>()) tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
             tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
             tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
@@ -122,6 +124,8 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Weapon = AttackComponent;
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Rebuild();
         }
+
+        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
