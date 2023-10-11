@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5418312449131230792}
   m_Layer: 0
   m_Name: Saw
-  m_TagString: Untagged
+  m_TagString: MonsterAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -136,11 +136,11 @@ MonoBehaviour:
   obstacleObject: {fileID: 503875348130008889}
   obstacleTransform: {fileID: 8758307496004929503}
   isRotation: 0
-  isMove_H: 0
+  isMove_H: 1
   isMove_V: 0
-  lineX: 4
-  lineY: 3.79
-  rotationSpeed: 43
-  moveSpeed_H: 4.8
-  moveSpeed_V: 4.52
+  lineX: 1.03
+  lineY: 1.1
+  rotationSpeed: 0
+  moveSpeed_H: 3.24
+  moveSpeed_V: 2.61
   firstPosition: {x: 0, y: 0, z: 0}
