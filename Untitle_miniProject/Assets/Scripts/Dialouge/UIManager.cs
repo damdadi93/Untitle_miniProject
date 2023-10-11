@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public float flashDuration = 200f;
     public Color flashColor = Color.white;
 
+    [Header("Victory")]
+    public GameObject victoryPanel;
     
     private void Awake()
     {
@@ -35,7 +37,30 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
             Instance = this;
         }
     }
+    public void LoadNextScene()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
 
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        forvictoryPanel();
+    }
+
+    public void RetryScene()
+    {
+        forvictoryPanel();
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    public void forMapButton()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("SceneSelect");
+    }
     public void fornewGame()
     {
         SceneManager.LoadScene("Prologue");
@@ -64,6 +89,10 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public void foropeningCanvas()
     {
         OpeningCanvas.SetActive(!OpeningCanvas.activeSelf);
+    }
+    public void forvictoryPanel()
+    {
+        victoryPanel.SetActive(true);
     }
 
     public void OnPointerClick(PointerEventData eventData)
