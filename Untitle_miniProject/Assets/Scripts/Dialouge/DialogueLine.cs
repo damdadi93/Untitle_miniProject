@@ -16,4 +16,9 @@ public class DialogueLine
         this.message = message;
         this.sprite = image;
     }
+    
+    public string GetSpeaker()
+    {
+        return speaker;
+    }
 }
