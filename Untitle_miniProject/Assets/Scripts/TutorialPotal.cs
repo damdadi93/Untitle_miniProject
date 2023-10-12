@@ -21,7 +21,7 @@ public class TutorialPotal : MonoBehaviour
         {
             // 플레이어가 트리거에 들어온 경우 VictoryGameObject을 활성화합니다.
             Debug.Log("victory");
-            SceneManager.LoadScene("Stage1");
+            SceneManager.LoadScene("SceneSelect");
         }
     }
 }
