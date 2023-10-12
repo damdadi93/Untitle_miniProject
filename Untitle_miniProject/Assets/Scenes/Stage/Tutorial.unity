@@ -3935,7 +3935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125.1, y: -62.1}
+  m_AnchoredPosition: {x: -122, y: -136}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &778185294
@@ -4189,8 +4189,10 @@ MonoBehaviour:
       \uC6C0\uC9C1\uC774\uACA0\uC5B4."
     sprite: {fileID: 0}
   - speaker: Friend
-    message: "\uC5B4\uB5BB\uAC8C \uD574\uC57C\uD558\uB294\uB370? \uB098 \uC774\uAC70
-      \uD574\uBCF8\uC801 \uC5C6\uC5B4."
+    message: "\uC5B4\uB5BB\uAC8C \uD574\uC57C\uD558\uB294\uB370? ."
+    sprite: {fileID: 21300000, guid: f9c61809318a42e48a0cd57335c74b28, type: 3}
+  - speaker: Friend
+    message: "\uB098 \uC774\uAC70 \uD574\uBCF8\uC801 \uC5C6\uC5B4."
     sprite: {fileID: 21300000, guid: f9c61809318a42e48a0cd57335c74b28, type: 3}
   - speaker: Programmer
     message: "\uAC70\uAE30 Component\uCC3D\uC788\uC9C0? \uADF8\uAC70 \uC5F4\uC5B4\uBD10."
@@ -4810,13 +4812,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 400
+  m_fontSizeBase: 400
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4898,7 +4900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4925,7 +4927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -70}
+  m_AnchoredPosition: {x: 350, y: -0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3080345431605313748
@@ -4957,8 +4959,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 350
     m_Right: 350
-    m_Top: 70
-    m_Bottom: 350
+    m_Top: 0
+    m_Bottom: 450
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -4986,7 +4988,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -124, y: -41}
-  m_SizeDelta: {x: 700, y: 420}
+  m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4274297364206103963
 MonoBehaviour:
@@ -5134,8 +5136,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 350
     m_Right: 350
-    m_Top: 70
-    m_Bottom: 350
+    m_Top: 0
+    m_Bottom: 450
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -5211,13 +5213,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 400
+  m_fontSizeBase: 400
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5318,13 +5320,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 400
+  m_fontSizeBase: 400
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5376,7 +5378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -70}
+  m_AnchoredPosition: {x: 350, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7337745605007309974
@@ -5410,7 +5412,7 @@ RectTransform:
   m_GameObject: {fileID: 5772501870734030817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3875, y: 1.1164894, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4301478304764395195}
@@ -5513,8 +5515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -170, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 170, y: -85.6}
-  m_SizeDelta: {x: 700, y: 420}
+  m_AnchoredPosition: {x: 154, y: -129}
+  m_SizeDelta: {x: 700, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8454653488316782921
 MonoBehaviour:
@@ -5531,10 +5533,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 350
     m_Right: 350
-    m_Top: 70
-    m_Bottom: 350
+    m_Top: 0
+    m_Bottom: 450
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
