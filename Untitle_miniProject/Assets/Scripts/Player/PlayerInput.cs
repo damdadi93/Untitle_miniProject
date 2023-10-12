@@ -53,6 +53,8 @@ public class PlayerInput : InputScript
                 GetComponent<AttackScript>().CancelInvoke("EndAttack");
                 if (health <= 0)
                 {
+                    Debug.Log("Dead");
+                    UIManager.Instance.RetryPanel.SetActive(true);
                     GetComponent<Animator>().SetTrigger("isDead");
                     GetComponent<Animator>().SetBool("isDeading", true);
                     Dead();

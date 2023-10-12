@@ -22,9 +22,10 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public float flashDuration = 200f;
     public Color flashColor = Color.white;
 
-    [Header("Victory")]
+    [Header("Victory&Retry")]
     public GameObject victoryPanel;
-    
+    public GameObject RetryPanel;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -52,6 +53,7 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public void RetryScene()
     {
         victoryPanel.SetActive(false);
+        RetryPanel.SetActive(false);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
     }
@@ -59,6 +61,7 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public void forMapButton()
     {
         victoryPanel.SetActive(false);
+        RetryPanel.SetActive(false);
         SceneManager.LoadScene("SceneSelect");
     }
     public void fornewGame()
