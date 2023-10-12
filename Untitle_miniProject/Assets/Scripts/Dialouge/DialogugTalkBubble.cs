@@ -15,6 +15,7 @@ public class DialogugTalkBubble : MonoBehaviour
     public GameObject Programmer;
     public GameObject Friend;
     public GameObject Robs;
+    public GameObject Canvas;
 
     public int i;
 
@@ -35,11 +36,9 @@ public class DialogugTalkBubble : MonoBehaviour
             sentences.Enqueue(sentence);
         }
 
-        Debug.Log("FirstDeQ:"+ Thesentens.speaker+Thesentens.message);
-        //버튼을 누르기 전 여기까지 작동.
     }
 
-    //버튼 클릭 시 다음 대화로 넘어감
+    //큐에서 문장과 화자 꺼내서 Thesentens네 저장하고 말풍선 생성.
     public void Next()
     {
         Thesentens = DeQ();
@@ -93,12 +92,12 @@ public class DialogugTalkBubble : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-    //대화 끝
+    //대화 끝나면 대화창 끄기.
     private void End()
     {
-        if (sentences != null)
+        if (Thesentens != null)
         {
-            Debug.Log("end");
+            Canvas.SetActive(false);
         }
     }
         public DialogueLine DeQ()
