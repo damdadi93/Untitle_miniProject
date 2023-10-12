@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossSword : MonoBehaviour
 {
-    private InputScript inputScript; // 입력
+    private Boss inputScript; // 입력
     private Rigidbody2D rigid; // 리지드바디
     private Animator animator; // 애니메이터
 
@@ -15,11 +15,10 @@ public class BossSword : MonoBehaviour
 
     public float Attackcul; //공격쿨타임
     public float AttackEndtime = 1f; //공격하고 다시 움직일때까지 시간
-    float cul = 0;
 
     void Awake()
     {
-        inputScript = GetComponent<InputScript>();
+        inputScript = GetComponent<Boss>();
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -29,13 +28,13 @@ public class BossSword : MonoBehaviour
         if (inputScript.attack)
         {
             inputScript.attack = false;
-            if (cul < 0)
+            if (inputScript.Attackcul < 0 && inputScript.Skillcul > 0)
             {
-                cul = Attackcul;
-                Attack();
+                inputScript.BossComponent.SetBool("isDown",true);
+                inputScript.Attackcul = Attackcul;
+                Invoke("Attack", 1f);
             }
         }
-        cul -= Time.deltaTime;
 
         if (SwordComponent)
         {
@@ -50,6 +49,7 @@ public class BossSword : MonoBehaviour
 
     private void Attack()
     {
+        inputScript.BossComponent.SetBool("isDown",false);
         SwordComponent = GameObject.Instantiate(SwordComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         SwordComponent.transform.SetParent(canvas.transform);
         SwordComponent.transform.position = SwordTrans.transform.position;

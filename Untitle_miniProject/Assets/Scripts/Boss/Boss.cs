@@ -9,30 +9,67 @@ public class Boss : InputScript
     public float AttackScope; //공격범위
 
     public int health;
-    float hitcul = 0;
+    public float hitcul = -1;
     public float Angry;
     public Transform playerTrans;
+    public SpriteRenderer Body;
+    public SpriteRenderer HitBody;
+
+    public Animator BossComponent;
+
+    public float Attackcul = 0;
+    public float Skillcul = 3f;
+
+    public int skill = 0;
+    private Animator animator;
 
     public void Awake()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        hitcul -= Time.deltaTime;
+        Attackcul -= Time.deltaTime;
+        Skillcul -= Time.deltaTime;
+
+        if (hitcul > 0)
+        {
+            hitcul -= Time.deltaTime;
+        }
+        else if(hitcul<0)
+        {
+            Body.enabled = true;
+            HitBody.enabled = false;
+            hitcul = 0;
+        }
+
+        if (animator.GetBool("isDeading"))
+        {
+            move = 0;
+            canMove = false;
+        }
         if (canMove)
         {
-
-            Debug.DrawRay(Sight.position, new Vector3(move * 5, 0, 0), new Color(0, 0, 1)); //플레이어탐지
-            RaycastHit2D PlayerrayHit = Physics2D.Raycast(Sight.position, new Vector3(move * 5, 0, 0), 1, LayerMask.GetMask("Player"));
+            if (Skillcul < 0 && Attackcul < 0 && !BossComponent.GetBool("isDown"))
+            {
+                skill = Random.Range(1, 4);
+            }
+            else
+            {
+                skill = 0;
+            }
 
             Debug.DrawRay(transform.position + new Vector3(0, 0.5f, 0), new Vector3(move * AttackScope, 0, 0), new Color(1, 0, 0)); //공격탐지
             RaycastHit2D AttackrayHit = Physics2D.Raycast(transform.position + new Vector3(0, 0.5f, 0), new Vector3(move * AttackScope, 0, 0), 1, LayerMask.GetMask("Player"));
-            if (AttackrayHit)
+            if (AttackrayHit && skill == 0 && !BossComponent.GetBool("isDown"))
             {
                 attack = true;
+            }
+            else
+            {
+                attack = false;
             }
 
             if (move != 0)
@@ -51,10 +88,9 @@ public class Boss : InputScript
     {
         if (collision.tag == "PlayerAttack")
         {
-            if (health > 0 && hitcul < 0)
+            if (health > 0 && hitcul <= 0)
             {
                 health -= 1;
-                GetComponent<AttackScript>().CancelInvoke("EndAttack");
                 if (health <= 0)
                 {
                     GetComponent<Animator>().SetTrigger("isDead");
@@ -63,8 +99,9 @@ public class Boss : InputScript
                 }
                 else
                 {
-                    GetComponent<Animator>().SetTrigger("isHit");
-                    hitcul = 0.5f;
+                    Body.enabled = false;
+                    HitBody.enabled = true;
+                    hitcul = 0.1f;
                 }
             }
         }
