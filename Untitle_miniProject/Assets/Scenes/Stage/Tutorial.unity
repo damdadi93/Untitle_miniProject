@@ -4178,18 +4178,17 @@ MonoBehaviour:
       \uAC74\uAC00?"
     sprite: {fileID: 0}
   - speaker: Programmer
-    message: "\uB108\uC758 \uC774\uB984\uC740 ~~\uACE0 \uC6B0\uB9AC \uCC98\uC74C
-      \uB9CC\uB09C\uACF3\uC740 ~~\uACE0 \uC8FC\uC800\uB9AC\uC8FC\uB7EC\uB9AC"
+    message: "\uC6B0\uB9AC \uC720\uB2C8\uD2F0\uACE0\uC5D0\uC11C \uCC98\uC74C \uB9CC\uB0AC\uC796\uC544!"
     sprite: {fileID: 0}
   - speaker: Friend
-    message: "\uC5B4.... \uC9C4\uC9DC 00\uC774\uAC00 \uB9DE\uB294\uAC70 \uAC19\uC740\uB370?"
+    message: "\uC5B4.... \uC598 \uC9C4\uC9DC\uC778 \uAC83 \uAC19\uC740\uB370..?"
     sprite: {fileID: 0}
   - speaker: Programmer
     message: "\uC77C\uB2E8 \uB098 \uC880 \uC6C0\uC9C1\uC5EC\uC918! \uBAB8\uC744 \uBABB
       \uC6C0\uC9C1\uC774\uACA0\uC5B4."
     sprite: {fileID: 0}
   - speaker: Friend
-    message: "\uC5B4\uB5BB\uAC8C \uD574\uC57C\uD558\uB294\uB370? ."
+    message: "\uC5B4\uB5BB\uAC8C \uD574\uC57C\uD558\uB294\uB370?"
     sprite: {fileID: 21300000, guid: f9c61809318a42e48a0cd57335c74b28, type: 3}
   - speaker: Friend
     message: "\uB098 \uC774\uAC70 \uD574\uBCF8\uC801 \uC5C6\uC5B4."
@@ -4224,9 +4223,11 @@ MonoBehaviour:
     message: "\uC54C\uACA0\uC5B4. \uC9C4\uC815\uD574\u314B\u314B \uC774\uC81C \uBB58\uD574\uC57C\uD574?"
     sprite: {fileID: 0}
   - speaker: Programmer
-    message: "\uC77C\uB2E8 \uC774 \uB9DD\uD560 \uAC8C\uC784\uC5D0\uC11C \uB098\uAC08
-      \uBC29\uBC95\uC744 \uCC3E\uC544\uC57C\uC9C0. \uC6C0\uC9C1\uC5EC\uC11C \uBB50\uB77C\uB3C4
-      \uD574\uBD10."
+    message: "\uC77C\uB2E8 \uC774 \uAC8C\uC784\uC5D0\uC11C \uB098\uAC08 \uBC29\uBC95\uC744
+      \uCC3E\uC544\uC57C\uC9C0."
+    sprite: {fileID: 0}
+  - speaker: Programmer
+    message: "\uC6C0\uC9C1\uC5EC\uC11C \uBB50\uB77C\uB3C4 \uD574\uBD10."
     sprite: {fileID: 0}
   - speaker: Robs
     message: "\uB108 \uB54C\uBB38\uC774\uC57C......"
@@ -4693,8 +4694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -40.6}
-  m_SizeDelta: {x: 700, y: 550}
+  m_AnchoredPosition: {x: 62, y: -14}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &933784340704754480
 GameObject:
@@ -4715,7 +4716,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &1114755765901910392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4760,9 +4761,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 820937333444156242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071459607418395237
@@ -4927,8 +4928,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 709.245, y: -303.4}
-  m_SizeDelta: {x: 718.49, y: 506.8}
+  m_AnchoredPosition: {x: 350, y: -150}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3080345431605313748
 MonoBehaviour:
@@ -4959,8 +4960,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 350
     m_Right: 350
-    m_Top: 50
-    m_Bottom: 500
+    m_Top: 150
+    m_Bottom: 400
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -4988,7 +4989,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -124, y: -41}
-  m_SizeDelta: {x: 1418.49, y: 1056.8}
+  m_SizeDelta: {x: 700, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4274297364206103963
 MonoBehaviour:
@@ -5010,7 +5011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6103448117129495711, guid: 19a0c0ebe0f008b41bd3469f3ff2cbc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5210c7e51830eab48882b3f169de0ae5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5111,7 +5112,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6103448117129495711, guid: 19a0c0ebe0f008b41bd3469f3ff2cbc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5210c7e51830eab48882b3f169de0ae5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5136,8 +5137,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 350
     m_Right: 350
-    m_Top: 50
-    m_Bottom: 500
+    m_Top: 150
+    m_Bottom: 400
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
@@ -5376,9 +5377,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8362163402129074119}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7337745605007309974
@@ -5497,7 +5498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8362163402129074119
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5516,7 +5517,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 154, y: -129}
-  m_SizeDelta: {x: 700, y: 450}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8454653488316782921
 MonoBehaviour:
@@ -5533,8 +5534,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 350
     m_Right: 350
-    m_Top: 50
-    m_Bottom: 500
+    m_Top: 150
+    m_Bottom: 400
   m_ChildAlignment: 0
   m_Spacing: 20
   m_ChildForceExpandWidth: 0
@@ -5564,7 +5565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6103448117129495711, guid: 19a0c0ebe0f008b41bd3469f3ff2cbc1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5210c7e51830eab48882b3f169de0ae5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
