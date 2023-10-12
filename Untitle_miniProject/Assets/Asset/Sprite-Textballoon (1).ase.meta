@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cd6a3ce46ba93f43b8f7f85025e2ae8
+guid: 48a112f371acf384291cb21ddac31a6a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,7 +119,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Sprite-Textballoon
+  - name: Sprite-Textballoon (1)
     originalName: 
     pivot: {x: 0.5, y: 0.33333334}
     alignment: 9
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 64
       height: 48
-    spriteID: d581d6837b86dca4da4fdfdd66f78b72
+    spriteID: 15140ce9deb616d4e8c21a5f26ca0f07
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1716608528
-    name: Sprite-Textballoon
+    guid: -245681426
+    name: Sprite-Textballoon (1)
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Sprite-Textballoon
+    - name: Sprite-Textballoon (1)
       frameIndex: 0
       cellRect:
         x: 0
         y: -16
         width: 64
         height: 48
-      spriteId: d581d6837b86dca4da4fdfdd66f78b72
+      spriteId: 15140ce9deb616d4e8c21a5f26ca0f07
     linkedCells: []
     parentIndex: -1
   platformSettings: []

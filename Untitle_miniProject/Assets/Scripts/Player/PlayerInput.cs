@@ -54,7 +54,8 @@ public class PlayerInput : InputScript
                 if (health <= 0)
                 {
                     Debug.Log("Dead");
-                    UIManager.Instance.RetryPanel.SetActive(true);
+                    if(UIManager.Instance)
+                        UIManager.Instance.RetryPanel.SetActive(true);
                     GetComponent<Animator>().SetTrigger("isDead");
                     GetComponent<Animator>().SetBool("isDeading", true);
                     Dead();
