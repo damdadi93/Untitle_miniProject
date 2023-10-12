@@ -9,7 +9,7 @@ public class StageSelector : MonoBehaviour
 {
     public static int selectedStage;
     public int stage;
-    //public string word;
+    public string word;
     public TextMeshProUGUI stageText;
     
 
@@ -17,17 +17,21 @@ public class StageSelector : MonoBehaviour
     void Awake()
     {
         stageText = GetComponentInChildren<TextMeshProUGUI>();
-
+        word = "T";
         //stageText.text = stage.ToString();
-        //if(stage == 0)
-        //{
-        //    word = "T";
-        //    stageText.text = word;
+        if (stage == 0)
+        {
+            
+            stageText.text = word.ToString();
 
-        //}
-        if(stageText)
+        }
+        if (stageText)
         {
             stageText.text = stage.ToString();
+            if(stage ==0)
+            {
+                stageText.text = word;
+            }
         }
         else
         {
@@ -42,12 +46,12 @@ public class StageSelector : MonoBehaviour
         if (stage == 0)
         {
             SceneManager.LoadScene("Tutorial");
-            SceneManager.LoadScene("UniversalStage(Background)");
+            //SceneManager.LoadScene("UniversalStage(Background)");
         }
         else
         {
-            SceneManager.LoadScene("UniversalStage(Background)");
-            //SceneManager.LoadScene("Stage" + stage.ToString());
+           // SceneManager.LoadScene("UniversalStage(Background)");
+            SceneManager.LoadScene("Stage" + stage.ToString());
         }
     }
 
