@@ -17,6 +17,8 @@ public class JumpScript : MonoBehaviour
 
     public float jumpScope = 1.1f;
 
+    public AudioSource JumpSound;
+
     void Awake()
     {
         inputScript = GetComponent<InputScript>();
@@ -35,15 +37,16 @@ public class JumpScript : MonoBehaviour
 
         if (inputScript.jump)//Á¡ÇÁ
         {
-            inputScript.jump = false;
             if (jumpCount > 0)
             {
                 jumpDust.Play();
+                JumpSound.Play();
                 rigid.velocity = new Vector2(rigid.velocity.x, 0);
                 rigid.AddForce(Vector2.up * jumpPower);
                 jumpCount -= 1;
                 animator.SetTrigger("isJump");
             }
+            inputScript.jump = false;
         }
 
         if (rayHit.collider != null)//ÂøÁö

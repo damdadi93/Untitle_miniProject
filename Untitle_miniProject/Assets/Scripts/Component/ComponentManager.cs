@@ -23,7 +23,8 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
     public GameObject JumpComponentPrefab;
     public GameObject AttackComponentPrefab;
 
-    
+    public int MaxComponentCount;//ÃÖ´ë ÄÄÆ÷³ÍÆ®°³¼ö
+    public GameObject BlankComponentPrefab;
 
     Color ImageColor;
 
@@ -54,6 +55,21 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
                 if (ComponentList[i] != transform)
                     Destroy(ComponentList[i].gameObject);
 
+        if (MaxComponentCount > 0)//ºó ÄÄÆ÷³ÍÆ®
+        {
+            int t = 0;
+            if (AttackComponent != "")
+                t = 1;
+
+            for (int i = t; i < MaxComponentCount - MoveComponent - JumpCompoent; i++)
+            {
+                GameObject tmpObject = GameObject.Instantiate(BlankComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                tmpObject.transform.SetParent(ComponentParent.transform);
+                tmpObject.transform.localScale = new Vector3(1, 1, 1);
+                tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
+
+            }
+        }
 
         if (MoveComponent > 0)
         {//ÀÌµ¿ ÄÄÆ÷³ÍÆ®
@@ -66,7 +82,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + MoveComponent;
 
             GameObject tmpObject = GameObject.Instantiate(MoveComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            if(tmpObject.GetComponent<ComponentDrag>()) tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
+            if (tmpObject.GetComponent<ComponentDrag>()) tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
             tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
             tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
@@ -124,8 +140,6 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Weapon = AttackComponent;
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Rebuild();
         }
-
-        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
