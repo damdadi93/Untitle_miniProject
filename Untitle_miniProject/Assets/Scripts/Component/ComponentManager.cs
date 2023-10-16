@@ -23,19 +23,24 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
     public GameObject JumpComponentPrefab;
     public GameObject AttackComponentPrefab;
 
-    
+    public int MaxComponentCount;//최대 컴포넌트개수
+    public int ComponentCount; //남은 컴포넌트개수
+    public GameObject BlankComponentPrefab;
 
     Color ImageColor;
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (eventData.pointerDrag != null)
+        if (MaxComponentCount ==0 || (MaxComponentCount>0 && ComponentCount>0))
         {
-            if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Move") MoveComponent += 1;
-            if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Jump") JumpCompoent += 1;
-            if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Attack") { AttackComponent = eventData.pointerDrag.GetComponent<ComponentDrag>().weapon; }
-            eventData.pointerDrag.GetComponent<ComponentDrag>().isEnd = true;
-            UIUpdate();
+            if (eventData.pointerDrag != null)
+            {
+                if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Move") MoveComponent += 1;
+                if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Jump") JumpCompoent += 1;
+                if (eventData.pointerDrag.GetComponent<ComponentDrag>().ComponentType == "Attack") { AttackComponent = eventData.pointerDrag.GetComponent<ComponentDrag>().weapon; }
+                eventData.pointerDrag.GetComponent<ComponentDrag>().isEnd = true;
+                UIUpdate();
+            }
         }
     }
 
@@ -55,6 +60,22 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
                     Destroy(ComponentList[i].gameObject);
 
 
+        if (MaxComponentCount > 0)//빈 컴포넌트
+        {
+            ComponentCount = MaxComponentCount - MoveComponent - JumpCompoent;
+            if (AttackComponent != "") ComponentCount -= 1;
+        }
+
+        for (int i = 0; i < ComponentCount; i++)
+        {
+            GameObject tmpObject = GameObject.Instantiate(BlankComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            tmpObject.transform.SetParent(ComponentParent.transform);
+            tmpObject.transform.localScale = new Vector3(1, 1, 1);
+            tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
+
+        }
+
+
         if (MoveComponent > 0)
         {//이동 컴포넌트
             if (MoveUI) MoveUI.SetActive(true);
@@ -66,7 +87,7 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             CoverObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "x" + MoveComponent;
 
             GameObject tmpObject = GameObject.Instantiate(MoveComponentPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            if(tmpObject.GetComponent<ComponentDrag>()) tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
+            if (tmpObject.GetComponent<ComponentDrag>()) tmpObject.GetComponent<ComponentDrag>().componentmanager = this;
             tmpObject.transform.SetParent(CoverObject.transform);
             tmpObject.transform.localScale = new Vector3(1, 1, 1);
             tmpObject.GetComponent<RectTransform>().localPosition = new Vector3(50, 25, 0);
@@ -124,18 +145,18 @@ public class ComponentManager : MonoBehaviour, IDropHandler, IPointerEnterHandle
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Weapon = AttackComponent;
             Character.GetComponent<Assets.PixelHeroes.Scripts.CharacterScripts.CharacterBuilder>().Rebuild();
         }
-
-        
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        ImageColor = GetComponent<Image>().color;
         ImageColor.a = 0.5f;
         GetComponent<Image>().color = ImageColor;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        ImageColor = GetComponent<Image>().color;
         ImageColor.a = 0.1f;
         GetComponent<Image>().color = ImageColor;
     }
