@@ -1241,7 +1241,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 202499352}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 74b0440230bae4e45a53c9dcc261354f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3376,7 +3376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5052758384036725318, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69.30001
+      value: 69.30101
       objectReference: {fileID: 0}
     - target: {fileID: 5687129174255737386, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchorMax.x
