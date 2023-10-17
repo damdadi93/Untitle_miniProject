@@ -5160,7 +5160,7 @@ GameObject:
   - component: {fileID: 2398511800219258438}
   - component: {fileID: 8206543642138593854}
   - component: {fileID: 8569911570002040632}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: NextTalkPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5420,8 +5420,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 70}
-  m_SizeDelta: {x: 600, y: 250}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 600, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8002425492645148977
 GameObject:
