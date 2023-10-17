@@ -41,14 +41,10 @@ public class DialogueManager : MonoBehaviour
         UIManager.Instance.fordialoguePanel();
         if (targetTag == "Opening" && !PlayerPrefs.HasKey("IsPlayOpening"))
         {
-            PlayerPrefs.SetInt("IsPlayOpening", 1);
-            PlayerPrefs.Save();
             targetSceneName = "MainMenu";
         }
         if (targetTag == "Prologue" && !PlayerPrefs.HasKey("IsPlayPrologue"))
         {
-            PlayerPrefs.SetInt("IsPlayPrologue", 1);
-            PlayerPrefs.Save();
             targetSceneName = "Tutorial";
         }
         UpdateDialogue();
@@ -96,7 +92,8 @@ public class DialogueManager : MonoBehaviour
         }
         else if (!string.IsNullOrEmpty(targetSceneName) && targetSceneName == "Tutorial" && !PlayerPrefs.HasKey("IsPlayPrologue"))
         {
-            UIManager.Instance.fordialogue();
+            UIManager.Instance.fordialoguePanel();
+            SceneManager.LoadScene("Tutorial");
         }
         else if (!string.IsNullOrEmpty(targetSceneName) && targetSceneName == "Tutorial" && PlayerPrefs.HasKey("IsPlayPrologue"))
         {
