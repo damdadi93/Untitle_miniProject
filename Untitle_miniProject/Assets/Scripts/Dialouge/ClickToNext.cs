@@ -13,7 +13,7 @@ public class ClickToNext : MonoBehaviour, IPointerClickHandler
         {
             DialogugTalk.Next();
             var sentence = DialogugTalk.Thesentens;
-            Debug.Log("Onclick" + sentence.speaker);
+            Debug.Log("Onclick" + sentence);
 
         }
 

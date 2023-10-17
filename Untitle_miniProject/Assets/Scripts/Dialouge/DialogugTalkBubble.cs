@@ -8,102 +8,112 @@ using Unity.VisualScripting;
 
 public class DialogugTalkBubble : MonoBehaviour
 {
-    public TextMeshProUGUI[] txtSentence;
-    public PublicSequence forprologue;
-    public DialogueLine Thesentens;
+    public TextMeshProUGUI txtSentence;
+    public DialogString forprologue;
 
-    public GameObject Programmer;
-    public GameObject Friend;
-    public GameObject Robs;
+    public GameObject TalkBubble;
+    public Transform[] TalkTrans;
     public GameObject Canvas;
 
-    public int i;
+    public GameObject friend;
 
-    public Queue<DialogueLine> sentences = new Queue<DialogueLine>();  //큐생성
+    public Queue<string> sentences = new Queue<string>();  //큐생성
+
+    public string Thesentens;
+
+    public bool isCorutine = false;
+
 
     private void Start()
     {
         Begin(forprologue);
+        Next();
     }
     //대화 시작
 
-    public void Begin(PublicSequence info)
+    public void Begin(DialogString dias)
     {
         sentences.Clear();  //큐에 내장되어있는 클리어 함수
-        Debug.Log("beforeEnQ");
-        foreach (var sentence in forprologue.defaultDialoge)
+        foreach (string sentence in dias.dialog)
         {
             sentences.Enqueue(sentence);
         }
 
     }
 
+    void Update()
+    {
+        TalkBubble.transform.position = TalkTrans[int.Parse(Thesentens.Split(":")[0])].position;
+    }
+
     //큐에서 문장과 화자 꺼내서 Thesentens네 저장하고 말풍선 생성.
+
+    public void GoNext()//무조건 다음으로
+    {
+        StopAllCoroutines();
+        isCorutine = false;
+        Next();
+    }
     public void Next()
     {
-        Thesentens = DeQ();
-        Debug.Log("Start Next(): " + Thesentens.speaker + Thesentens.message);
-        
-        if(Thesentens.speaker == "Programmer")
-        {
-            Programmer.SetActive(true);
-            Friend.SetActive(false);
-            Robs.SetActive(false);
-            i = 0;
-            Typing(i);
-        }
-        else if (Thesentens.speaker == "Friend")
-        {
-            Friend.SetActive(true);
-            Programmer.SetActive (false);
-            Robs.SetActive (false);
-            i = 1;
-            Typing(i);
-        }
-        else if (Thesentens.speaker == "Robs")
-        {
-            Robs.SetActive(true);
-            Programmer.SetActive(false);
-            Friend.SetActive(false);
-            i = 2;
-            Typing(i);
-        }
-        if (sentences.Count == 0)
+        if (sentences.Count == 0 && !isCorutine)
         {
             End();
-            return;
+        }
+        else
+        {
+            if (isCorutine)
+            {
+                StopAllCoroutines();
+                txtSentence.text = Thesentens.Split(":")[1];
+                isCorutine = false;
+            }
+            else
+            {
+                Thesentens = sentences.Dequeue();
+
+
+                TalkBubble.SetActive(true);
+
+                if (Thesentens.Split(":")[0] == "1")//일러스트
+                    friend.SetActive(true);
+                else
+                    friend.SetActive(false);
+
+                Typing(Thesentens.Split(":")[1]);
+            }
         }
 
     }
 
     //타이핑할 TMP파일 배열을 받는 메소드
-    public void Typing(int i)
+    public void Typing(string str)
     {
-        txtSentence[i].text = string.Empty;
+        txtSentence.text = string.Empty;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(Thesentens));
+        StartCoroutine(TypeSentence(str));
     }
     //타이핑 모션 함수
-    IEnumerator TypeSentence(DialogueLine sentence)
+    IEnumerator TypeSentence(string sentence)
     {
-        foreach (var letter in sentence.message)
+        isCorutine = true;
+        foreach (var letter in sentence)
         {
-            txtSentence[i].text += letter;
+            txtSentence.text += letter;
             yield return new WaitForSeconds(0.1f);
         }
+        isCorutine = false;
     }
     //대화 끝나면 대화창 끄기.
     private void End()
     {
-        if (Thesentens != null)
-        {
-            Canvas.SetActive(false);
-        }
+
+        Canvas.SetActive(false);
+
     }
-        public DialogueLine DeQ()
+        public string DeQ()
     {
         var sentence = sentences.Dequeue();
-        Debug.Log("DeQ!"+ sentence.speaker);
         return sentence;
     }
 }
