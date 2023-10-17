@@ -19,7 +19,6 @@ public class DialogueManager : MonoBehaviour
     public Animator dialougeAnimator;
     private string targetSceneName;
 
-    private bool IsFirst = true;
     private void Awake()
     {
         if (Instance != null && Instance != this)

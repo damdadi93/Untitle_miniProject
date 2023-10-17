@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 
 public class DialogugTalkBubble : MonoBehaviour
@@ -15,7 +16,8 @@ public class DialogugTalkBubble : MonoBehaviour
     public Transform[] TalkTrans;
     public GameObject Canvas;
 
-    public GameObject friend;
+    public Image friend;
+    Color color = new Color(0, 0, 0, 0);
 
     public Queue<string> sentences = new Queue<string>();  //큐생성
 
@@ -44,6 +46,8 @@ public class DialogugTalkBubble : MonoBehaviour
     void Update()
     {
         TalkBubble.transform.position = TalkTrans[int.Parse(Thesentens.Split(":")[0])].position;
+
+        friend.color = Color.Lerp(friend.color, color,0.1f);
     }
 
     //큐에서 문장과 화자 꺼내서 Thesentens네 저장하고 말풍선 생성.
@@ -65,7 +69,17 @@ public class DialogugTalkBubble : MonoBehaviour
             if (isCorutine)
             {
                 StopAllCoroutines();
-                txtSentence.text = Thesentens.Split(":")[1];
+
+                txtSentence.text = "";
+                foreach (char letter in Thesentens.Split(":")[1])
+                {
+                    if (letter.Equals('/')) { 
+                        txtSentence.text += "<br>";
+                        continue;
+                    }
+                    else txtSentence.text += letter;
+                }
+
                 isCorutine = false;
             }
             else
@@ -76,9 +90,9 @@ public class DialogugTalkBubble : MonoBehaviour
                 TalkBubble.SetActive(true);
 
                 if (Thesentens.Split(":")[0] == "1")//일러스트
-                    friend.SetActive(true);
+                    color = new Color(1, 1, 1, 1);
                 else
-                    friend.SetActive(false);
+                    color = new Color(1, 1, 1, 0);
 
                 Typing(Thesentens.Split(":")[1]);
             }
@@ -97,9 +111,11 @@ public class DialogugTalkBubble : MonoBehaviour
     IEnumerator TypeSentence(string sentence)
     {
         isCorutine = true;
-        foreach (var letter in sentence)
+        foreach (char letter in sentence)
         {
-            txtSentence.text += letter;
+            if(letter.Equals('/')) txtSentence.text += "<br>";
+            else txtSentence.text += letter;
+
             yield return new WaitForSeconds(0.1f);
         }
         isCorutine = false;

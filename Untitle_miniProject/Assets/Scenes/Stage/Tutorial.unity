@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &44842240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -341,7 +341,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4571124747573435084, guid: f5245031f6b521c49af464658aea103b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1334875033}
+      addedObject: {fileID: 1334875038}
   m_SourcePrefab: {fileID: 100100000, guid: f5245031f6b521c49af464658aea103b, type: 3}
 --- !u!1 &261800981
 GameObject:
@@ -3819,7 +3819,7 @@ MonoBehaviour:
   - {fileID: 336643629}
   - {fileID: 302635036}
   Canvas: {fileID: 4365534179817507543}
-  friend: {fileID: 44842239}
+  friend: {fileID: 44842241}
   Thesentens: 
   isCorutine: 0
 --- !u!4 &1319075024
@@ -3869,7 +3869,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4571124747573435084, guid: f5245031f6b521c49af464658aea103b, type: 3}
   m_PrefabInstance: {fileID: 246916613}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1334875033
+--- !u!114 &1334875038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3881,9 +3881,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04756db0b978ce46a05d06cba877fde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Robs: {fileID: 5649433928217089188}
-  Potal: {fileID: 1334875027}
-  Canvas: {fileID: 4365534179817507543}
+  Robs: {fileID: 0}
+  Potal: {fileID: 0}
+  Canvas: {fileID: 0}
 --- !u!114 &1363210202 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2764281959222816750, guid: a73ded34995f27046be89561fd294438, type: 3}
@@ -4014,7 +4014,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &1520569201
 Canvas:
   m_ObjectHideFlags: 0
@@ -4325,25 +4325,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - "1:\uCEF4\uD4E8\uD130\uAC00 \uC65C \uCF1C\uC838\uC788\uB294\uAC70\uC9C0?"
-  - "0:\uC774 \uBAA9\uC18C\uB9AC\uB294? \uCE5C\uAD6C\uC57C! \uB098\uC880 \uAEBC\uB0B4\uC918!!"
-  - "1:\uC5B4? \uB108 \uC65C \uAC8C\uC784\uC548\uC5D0\uC788\uC5B4??"
-  - "0:\uB098\uB3C4 \uBAA8\uB974\uACA0\uC5B4! \uBE5B\uC774 \uBC88\uCA4D\uD558\uACE0
-    \uC815\uC2E0\uCC28\uB9AC\uB2C8...."
-  - "0:\uC77C\uB2E8 \uC5B4\uB5BB\uAC8C\uB4E0 \uD574\uBCFC\uC218 \uC5C6\uC5B4? \uBAB8\uC744
-    \uBABB\uC6C0\uC9C1\uC774\uACA0\uC5B4!"
-  - "1:\uC5B4\uB5BB\uAC8C \uD574\uC57C\uD558\uB294\uB370? \uB098 \uC774\uAC70 \uD574\uBCF8\uC801
+  - "1:\uC65C \uC774 \uCEF4\uD4E8\uD130\uB9CC/  \uCF1C\uC838\uC788\uB294\uAC70\uC9C0?"
+  - "0:\uC774 \uBAA9\uC18C\uB9AC\uB294? /\uCE5C\uAD6C\uC57C! \uB098\uC880 \uAEBC\uB0B4\uC918!!"
+  - "1:\uC5B4? \uC800 \uCE90\uB9AD\uD130\uB294 \uC124\uB9C8?/\uB108 \uC65C \uAC8C\uC784\uC548\uC5D0
+    \uC788\uC5B4??"
+  - "0:\uB098\uB3C4 \uBAA8\uB974\uACA0\uC5B4! /\uBE5B\uC774 \uBC88\uCA4D\uD558\uACE0
+    \uC815\uC2E0\uCC28\uB824\uBCF4\uB2C8..."
+  - "0:\uC77C\uB2E8 \uBB50\uB4E0 \uD574\uBCFC\uC218 \uC5C6\uC5B4? /\uBAB8\uC744 \uBABB\uC6C0\uC9C1\uC774\uACA0\uC5B4!"
+  - "1:\uC5B4\uB5BB\uAC8C \uD574\uC57C\uD558\uB294\uB370? /\uB098 \uC774\uAC70 \uD574\uBCF8\uC801
     \uC5C6\uB2E8\uB9D0\uC774\uC57C."
-  - "0:\uAC70\uAE30 Component\uCC3D\uC788\uC9C0? \uADF8\uAC70 \uC5F4\uC5B4\uBD10."
+  - "0:\uC544\uB798\uC5D0 Component\uCC3D \uC788\uC9C0?/\uADF8\uAC70 \uC5F4\uC5B4\uBD10."
   - "1:\uB41C\uAC74\uAC00?"
-  - "0:\uC88B\uC544! \uAC70\uAE30\uC5D0 \uC788\uB294 \uCEF4\uD3EC\uB10C\uD2B8\uB97C
-    \uB098\uD55C\uD14C \uB4DC\uB798\uADF8\uD574\uC11C \uBD80\uC5EC\uD574\uC918!"
-  - "1:\uB41C\uAC70\uAC19\uC544! \uC6C0\uC9C1\uC77C \uC218 \uC788\uB294\uAC70\uC9C0?"
-  - "0:\uC7A0\uAE50... \uCEF4\uD3EC\uB10C\uD2B8 \uCC3D\uC744 \uB2E4\uC2DC \uB2EB\uC544\uBD10"
+  - "0:\uC88B\uC544! \uAC70\uAE30\uC5D0 \uC788\uB294 \uCEF4\uD3EC\uB10C\uD2B8\uB97C/\uB098\uD55C\uD14C
+    \uB4DC\uB798\uADF8\uD574\uC11C \uBD80\uC5EC\uD574\uC918!"
+  - "1:\uB41C...\uAC70\uAC19\uC544! \uC6C0\uC9C1\uC77C \uC218 \uC788\uB294\uAC70\uC9C0?"
+  - "0:\uC7A0\uAE50... \uC544\uC9C1 \uC548\uB418\uB294\uB370?/\uCEF4\uD3EC\uB10C\uD2B8
+    \uCC3D\uC744 \uB2E4\uC2DC \uB2EB\uC544\uBD10"
+  - "1:\uC774\uC81C \uC6C0\uC9C1\uC77C\uC218 \uC788\uB294\uAC70\uC9C0?"
   - "0:\uC624\uC624 \uC6C0\uC9C1\uC778\uB2E4!"
   - 2:...
   - "1:\uB204\uAC00 \uC788\uB294\uB370? \uC544\uB294 \uC0AC\uB78C\uC774\uC57C?"
-  - "0:\uC800\uB140\uC11D\uC774\uC57C! \uC800\uB140\uC11D\uC774 \uB098\uB97C \uAC8C\uC784\uC548\uC5D0
+  - "0:\uC800\uB140\uC11D\uC774\uC57C! /\uC800\uB140\uC11D\uC774 \uB098\uB97C \uAC8C\uC784\uC548\uC5D0
     \uAC00\uB480\uB2E4\uACE0!"
   - 2:...
   - "0:\uAC70\uAE30\uC11C!!"
@@ -4730,7 +4732,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 759371587451198970, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.04
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 1492886962055167108, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4782,7 +4784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2978127190937817298, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.04
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 4399679888502025320, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4826,15 +4828,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4771165210426623431, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.250842
+      value: -6.2481728
       objectReference: {fileID: 0}
     - target: {fileID: 4771165210426623431, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.987576
+      value: 2.9876719
       objectReference: {fileID: 0}
     - target: {fileID: 5052758384036725318, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00003811246
+      value: -0.00090988685
       objectReference: {fileID: 0}
     - target: {fileID: 5687129174255737386, guid: a73ded34995f27046be89561fd294438, type: 3}
       propertyPath: m_AnchorMax.x
