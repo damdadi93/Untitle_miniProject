@@ -96,8 +96,9 @@ public class DialogueManager : MonoBehaviour
         }
         else if (!string.IsNullOrEmpty(targetSceneName) && targetSceneName == "Tutorial" && !PlayerPrefs.HasKey("IsPlayPrologue"))
         {
-            UIManager.Instance.fordialogue();
-            dialougeAnimator.SetBool("Enlarge", true);
+            UIManager.Instance.fordialoguePanel();
+            SceneManager.LoadScene("Tutorial");
+
         }
         else if (!string.IsNullOrEmpty(targetSceneName) && targetSceneName == "Tutorial" && PlayerPrefs.HasKey("IsPlayPrologue"))
         {
