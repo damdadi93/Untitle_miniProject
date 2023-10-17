@@ -9,6 +9,7 @@ TagManager:
   - Moster
   - PlayerAttack
   - MonsterAttack
+  - Stage
   layers:
   - Default
   - TransparentFX

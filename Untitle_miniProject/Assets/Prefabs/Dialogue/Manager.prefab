@@ -388,6 +388,14 @@ MonoBehaviour:
   flashColor: {r: 1, g: 1, b: 1, a: 1}
   victoryPanel: {fileID: 3509522918557778938}
   RetryPanel: {fileID: 3633948435385700615, guid: f1d7c82d15b610b47adffab8630f2dd6, type: 3}
+  stageButton:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  currentSceneIndex: 0
+  i: 0
 --- !u!1 &5850903082145545569
 GameObject:
   m_ObjectHideFlags: 0
