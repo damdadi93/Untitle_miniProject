@@ -27,10 +27,9 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public GameObject RetryPanel;
 
     [Header("LockStage")]
-    public Button stageButton;
-    
     public int currentSceneIndex;
-    public int i = 0;
+    public int nextSceneIndex;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -59,8 +58,9 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
             SceneManager.LoadScene(nextSceneIndex);
         }
         victoryPanel.SetActive(false);
-        stageButton.interactable = true;
-        i++;
+        
+
+       
     }
 
 

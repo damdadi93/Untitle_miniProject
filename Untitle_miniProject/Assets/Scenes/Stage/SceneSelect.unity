@@ -344,6 +344,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &385454467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1275389121597092946, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4085800337139092621, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234836774680777911, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: m_Name
+      value: Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242021323593883801, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+      propertyPath: RetryPanel
+      value: 
+      objectReference: {fileID: 2032041787}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
 --- !u!1001 &394651101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,6 +425,10 @@ PrefabInstance:
       propertyPath: stage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: stageButton
+      value: 
+      objectReference: {fileID: 960231370}
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (2)
@@ -368,9 +437,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -649,6 +726,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: stageButton
+      value: 
+      objectReference: {fileID: 923145224}
+    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: stageButton.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -676,9 +757,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -932,6 +1021,10 @@ PrefabInstance:
       propertyPath: stage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: stageButton
+      value: 
+      objectReference: {fileID: 1157714268}
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (5)
@@ -940,9 +1033,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -1193,6 +1294,10 @@ PrefabInstance:
       propertyPath: stage
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: stageButton
+      value: 
+      objectReference: {fileID: 1421481870}
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (4)
@@ -1201,9 +1306,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Interactable
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Colors.m_NormalColor.b
@@ -1350,9 +1463,29 @@ PrefabInstance:
       propertyPath: stage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: stageButton
+      value: 
+      objectReference: {fileID: 1489106416}
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5917143423363214265, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Color.b
@@ -1456,6 +1589,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
   m_PrefabInstance: {fileID: 1489106413}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1489106416 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+  m_PrefabInstance: {fileID: 1489106413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1505705310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1976,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021797917}
   m_CullTransparentMesh: 1
+--- !u!1 &2032041787 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7292292177011232686, guid: 4477dcd1d000bec43806992c4c399f32, type: 3}
+  m_PrefabInstance: {fileID: 385454467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &468476526158713115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1950,6 +2099,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageSelector
       objectReference: {fileID: 0}
+    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_TagString
+      value: Stage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6923669459262684953, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_text
       value: T
@@ -2049,3 +2214,4 @@ SceneRoots:
   - {fileID: 1638467419}
   - {fileID: 304299646}
   - {fileID: 1408406034}
+  - {fileID: 385454467}

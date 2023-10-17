@@ -16,22 +16,25 @@ public class StageSelector : MonoBehaviour
     public Button stageButton;
 
 
-    //public Color buttonColor;
-    //public ColorBlock buttonColorBlock;
-   // public Button stageButton;
-    //public int buttonStack;
+    public Color buttonColor;
+    public ColorBlock buttonColorBlock;
+   
+    public int buttonStack;
     //버튼이 비활성화 되어야한다. 
     //stage2부터 5까지
 
-  
 
-  
+
+    private void Start()
+    {
+        stageButton = GetComponent<Button>();
+    }
+    
 
     void Awake()
     {
         
-        stageButton = GetComponent<Button>();
-        stageButton.interactable = false;
+   
         stageText = GetComponentInChildren<TextMeshProUGUI>();
         word = "T";
 
@@ -41,12 +44,9 @@ public class StageSelector : MonoBehaviour
         {
             
             stageText.text = word.ToString();
-            stageButton.interactable = true;
+            
         }
-        else if(stage == 1)
-        {
-            stageButton.interactable = true;
-        }
+      
         if (stageText)
         {
             stageText.text = stage.ToString();
@@ -60,6 +60,15 @@ public class StageSelector : MonoBehaviour
         else
         {
             //Debug.LogError("StageText not found!");
+        }
+    }
+
+    public void Update()
+    {
+        if (stage == UIManager.Instance.currentSceneIndex - 8)
+        {
+            stageButton.interactable = true;
+            Debug.Log(UIManager.Instance.currentSceneIndex);
         }
     }
 

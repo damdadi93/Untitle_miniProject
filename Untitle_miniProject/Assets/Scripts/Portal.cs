@@ -12,6 +12,7 @@ public class Portal : MonoBehaviour
             if (UIManager.Instance != null)
             {
                 UIManager.Instance.forvictoryPanel();
+
             }
             Debug.Log("victory");
         }
