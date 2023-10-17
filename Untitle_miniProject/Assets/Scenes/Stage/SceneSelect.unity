@@ -364,42 +364,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageSelector (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -648,65 +612,9 @@ PrefabInstance:
       propertyPath: stage
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: stageButton.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: stageButton.Array.data[0]
-      value: 
-      objectReference: {fileID: 960231370}
-    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: stageButton.Array.data[1]
-      value: 
-      objectReference: {fileID: 923145224}
-    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: stageButton.Array.data[2]
-      value: 
-      objectReference: {fileID: 1421481870}
-    - target: {fileID: 1322346145146965121, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: stageButton.Array.data[3]
-      value: 
-      objectReference: {fileID: 1157714268}
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.r
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Pivot.x
@@ -798,17 +706,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
   m_PrefabInstance: {fileID: 923145221}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &923145224 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-  m_PrefabInstance: {fileID: 923145221}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &954346422
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,17 +797,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954346422}
   m_CullTransparentMesh: 1
---- !u!114 &960231370 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-  m_PrefabInstance: {fileID: 394651101}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &968350561 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6427777659111709645, guid: 8fd9361251fbf0541a7eee53c754c0ba, type: 3}
@@ -935,42 +821,6 @@ PrefabInstance:
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.r
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Pivot.x
@@ -1062,17 +912,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
   m_PrefabInstance: {fileID: 1157714265}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1157714268 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-  m_PrefabInstance: {fileID: 1157714265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1408406030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,42 +1036,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageSelector (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_NormalColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Colors.m_DisabledColor.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1323,17 +1126,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
   m_PrefabInstance: {fileID: 1421481867}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1421481870 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4599594629718734064, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-  m_PrefabInstance: {fileID: 1421481867}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1489106413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1353,18 +1145,6 @@ PrefabInstance:
     - target: {fileID: 3772748282530075005, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Name
       value: StageSelector (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5917143423363214265, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5917143423363214265, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5917143423363214265, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8709966414241127545, guid: fae0c5c646c44514cb3b1ec77848ba6c, type: 3}
       propertyPath: m_Pivot.x
