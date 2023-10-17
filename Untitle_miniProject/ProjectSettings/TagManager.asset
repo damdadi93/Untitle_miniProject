@@ -9,8 +9,7 @@ TagManager:
   - Moster
   - PlayerAttack
   - MonsterAttack
-  - Box
-  - Item
+  - Stage
   layers:
   - Default
   - TransparentFX
@@ -21,7 +20,7 @@ TagManager:
   - Ground
   - Player
   - Monster
-  - TouchPanel
+  - 
   - 
   - 
   - 

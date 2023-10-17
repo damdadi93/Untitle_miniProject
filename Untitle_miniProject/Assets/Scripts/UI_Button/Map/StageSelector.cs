@@ -12,8 +12,10 @@ public class StageSelector : MonoBehaviour
     public string word;
     public TextMeshProUGUI stageText;
 
+    private Button button;
     void Awake()
     {
+        button = GetComponent<Button>();
         stageText = GetComponentInChildren<TextMeshProUGUI>();
         word = "T";
         //stageText.text = stage.ToString();

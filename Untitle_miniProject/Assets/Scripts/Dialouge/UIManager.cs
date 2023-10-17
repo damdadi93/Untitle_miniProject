@@ -26,6 +26,10 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public GameObject victoryPanel;
     public GameObject RetryPanel;
 
+    [Header("LockStage")]
+    public int currentSceneIndex;
+    public int nextSceneIndex;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -38,9 +42,15 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
             Instance = this;
         }
     }
+
+    void Update()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    }
+
     public void LoadNextScene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        
         int nextSceneIndex = currentSceneIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
@@ -48,7 +58,11 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
             SceneManager.LoadScene(nextSceneIndex);
         }
         victoryPanel.SetActive(false);
+        
+
+       
     }
+
 
     public void RetryScene()
     {
@@ -96,6 +110,7 @@ public class UIManager : MonoBehaviour, IPointerClickHandler
     public void forvictoryPanel()
     {
         victoryPanel.SetActive(true);
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)
