@@ -9,11 +9,11 @@ public class PlayerInput : InputScript
     public Image joystickImage;
     public Sprite[] joystickSprites;
 
+    public int boxCount;
     public int health;
     float hitcul = 0;
-
     private string moveAxisName = "Horizontal";
-
+    private bool boxRequested = false;
     public void Update()
     {
         hitcul -= Time.deltaTime;
@@ -26,7 +26,10 @@ public class PlayerInput : InputScript
             else
                 jump = false;
             if (Input.GetButtonDown("Fire1"))
+            {
+                boxRequested = true;
                 attack = true;
+            }
 
 
             if (joystick)
@@ -66,6 +69,30 @@ public class PlayerInput : InputScript
                     GetComponent<Animator>().SetTrigger("isHit");
                 }
             }
+        }
+        if(collision.tag == "Box")
+        {
+            Box box = GameObject.FindGameObjectWithTag("Box").GetComponent<Box>();
+            if (boxCount > 0)
+            {
+                Vector3 boxPosition = collision.transform.position;
+                boxPosition.y -= 0.5f;
+                if (boxRequested)
+                {
+                    boxCount--;
+                    if (boxCount <= 0)
+                    {
+                        Destroy(collision.gameObject);
+
+                        Instantiate(box.item, boxPosition, Quaternion.identity);
+                        boxRequested = false;
+                    }
+                }
+            }
+        }
+        if (collision.tag == "Item")
+        {
+            Destroy(collision.gameObject);
         }
     }
     void Dead()
