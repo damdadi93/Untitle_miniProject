@@ -25,12 +25,12 @@ public class AttackScript : MonoBehaviour
     {
         if (inputScript.attack)
         {
-            inputScript.attack = false;
             if (cul < 0)
             {
                 cul = Attackcul;
                 Attack();
             }
+            inputScript.attack = false;
         }
         cul -= Time.deltaTime;
     }
@@ -47,6 +47,10 @@ public class AttackScript : MonoBehaviour
             inputScript.canMove = false;
             inputScript.move = 0;
             Invoke("EndAttack", AttackEndtime);
+        }
+        else
+        {
+            animator.SetBool("isAttacking", false);
         }
     }
     public void EndAttack()

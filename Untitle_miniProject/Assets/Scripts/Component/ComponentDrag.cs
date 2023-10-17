@@ -30,16 +30,26 @@ public class ComponentDrag : MonoBehaviour, IEndDragHandler, IDragHandler, IBegi
         if (ComponentType == "Jump") componentmanager.JumpCompoent -= 1;
         if (ComponentType == "Attack") { componentmanager.AttackComponent = ""; }
         componentmanager.UIUpdate();
+
+        GameObject[] ComponentManagers = GameObject.FindGameObjectsWithTag("ComponentManager");//모든 컴포넌트 매니저 활성화
+        for (int i = 0; i < ComponentManagers.Length; i++)
+        {
+            if (ComponentManagers[i].GetComponent<ComponentManager>().MaxComponentCount == 0 || (ComponentManagers[i].GetComponent<ComponentManager>().ComponentCount > 0 && ComponentManagers[i].GetComponent<ComponentManager>().MaxComponentCount > 0))
+            {
+                ComponentManagers[i].GetComponent<Image>().color = new Color(1, 1, 1, 0.3f);
+            }
+            else
+            {
+                ComponentManagers[i].GetComponent<Image>().color = new Color(1, 0, 0, 0.3f);
+            }
+            ComponentManagers[i].GetComponent<Image>().enabled = true;
+        }
+        componentmanager.GetComponent<Image>().enabled = false; //이 컴포넌트의 컴포넌트 매니저만 비활성화
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         GetComponent<RectTransform>().position = (Vector2)Cam.ScreenToWorldPoint(Input.mousePosition);//마우스 따라가도록
-
-        GameObject[] ComponentManagers = GameObject.FindGameObjectsWithTag("ComponentManager");//모든 컴포넌트 매니저 활성화
-        for(int i=0; i< ComponentManagers.Length; i++)
-            ComponentManagers[i].GetComponent<Image>().enabled = true;
-        componentmanager.GetComponent<Image>().enabled = false; //이 컴포넌트의 컴포넌트 매니저만 비활성화
     }
 
     public void OnEndDrag(PointerEventData eventData)

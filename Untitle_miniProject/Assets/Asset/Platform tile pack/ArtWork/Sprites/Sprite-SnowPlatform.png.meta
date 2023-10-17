@@ -189,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 661519fe29b5b4c88b3f5b86456ce493
-      internalID: -1528477968
+      spriteID: c913c70a35b9b43ea9e4ba197848997c
+      internalID: -1488587374
       vertices: []
       indices: 
       edges: []
@@ -210,8 +210,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f92a1ad48c734055a5118c78e259ea9
-      internalID: 543560677
+      spriteID: 00a20161d1f75409d9f83c5b205d5f94
+      internalID: 82028566
       vertices: []
       indices: 
       edges: []
@@ -231,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36d2abe2132284b42a74221609c5d0f1
-      internalID: -1989757316
+      spriteID: e8e517b6c4c3641ccbb680ef8c36bf1c
+      internalID: -1224472578
       vertices: []
       indices: 
       edges: []
@@ -252,8 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 401676e43bddf4732b16d8c42132834d
-      internalID: -1547611065
+      spriteID: 3a357469a0c83481192635e3c188b90b
+      internalID: -812995580
       vertices: []
       indices: 
       edges: []
@@ -273,8 +273,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adfbee18307d447d693cbc506535bb1b
-      internalID: 1735968409
+      spriteID: 9b45607aeb95047d89ddc5fa17d0da9c
+      internalID: -1589058774
       vertices: []
       indices: 
       edges: []
@@ -294,8 +294,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb4a73625261345bf9fb7ecce1432e72
-      internalID: -1189055725
+      spriteID: da498d865b02f4c9fb7f67322699de18
+      internalID: -1528814027
       vertices: []
       indices: 
       edges: []
@@ -311,12 +311,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite-SnowPlatform_0: -1528477968
-      Sprite-SnowPlatform_1: 543560677
-      Sprite-SnowPlatform_2: -1989757316
-      Sprite-SnowPlatform_3: -1547611065
-      Sprite-SnowPlatform_4: 1735968409
-      Sprite-SnowPlatform_5: -1189055725
+      Sprite-SnowPlatform_0: -1488587374
+      Sprite-SnowPlatform_1: 82028566
+      Sprite-SnowPlatform_2: -1224472578
+      Sprite-SnowPlatform_3: -812995580
+      Sprite-SnowPlatform_4: -1589058774
+      Sprite-SnowPlatform_5: -1528814027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

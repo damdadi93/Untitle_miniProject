@@ -105,10 +105,12 @@ public class PlayerInput : InputScript
 
     public void JumpButton()
     {
-        jump = true;
+        if (canMove)
+            jump = true;
     }
     public void AttackButton()
     {
-        attack = true;
+        if (canMove)
+            attack = true;
     }
 }

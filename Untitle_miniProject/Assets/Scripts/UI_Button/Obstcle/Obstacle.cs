@@ -65,7 +65,7 @@ public class Obstacle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        transform.position = Vector2.MoveTowards(transform.position, obstacleTransform.position, Time.deltaTime*moveSpeed_H);
     }
     void Update()
     {
