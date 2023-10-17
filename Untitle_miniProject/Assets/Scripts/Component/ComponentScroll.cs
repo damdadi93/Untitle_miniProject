@@ -10,8 +10,8 @@ public class ComponentScroll : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     public GameObject OperationUI;
 
-    float targetPos = 0;
-    bool isdrag = false;
+    public float targetPos = 0;
+    public bool isdrag = false;
 
     public void Awake()
     {
